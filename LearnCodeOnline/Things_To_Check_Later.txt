@@ -1,0 +1,7 @@
+kangax.github.io/compat-table/es6
+boilerplate
+templates
+throttling
+polifill
+currying
+prototype change
