@@ -5,6 +5,9 @@ How does javascript runs in browser
  JS ENGINES
  -> V8 [ written in c++ ] and spider monkey [deno/node.js are there as well]
  
+ #Javascript
+ Client-side Scripting Language a browser is also known as a Web 
+ 
  running .js file using node
  -> node filename.js
 
