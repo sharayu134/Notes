@@ -1,0 +1,8 @@
+Static array has fixed size, dynamic array can grow and shrink
+
+implemmenting dynamic array 
+
+Initialize the array with some initial size and if while adding element size overflows
+create new array with double size
+add old values
+add excceded value
