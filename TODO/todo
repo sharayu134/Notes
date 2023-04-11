@@ -5,3 +5,7 @@ compator implementation
 inner class
 lombok
 docker
+message queuing techniques
+kafka
+sqs/sns
+cacheing solutions - redis/memChached
