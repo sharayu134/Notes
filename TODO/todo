@@ -9,3 +9,5 @@ message queuing techniques
 kafka
 sqs/sns
 cacheing solutions - redis/memChached
+cassandra/mondodb/redis try out online things
+normalization 
