@@ -3,3 +3,8 @@ https://www.w3schools.com/js/js_hoisting.asp
 
 <h1>Closure</h1>
 https://www.w3schools.com/js/js_function_closures.asp
+It's like hiding the global variable from other functions
+const add = (function () {
+  let counter = 0;
+  return function () {counter += 1; return counter}
+})();
