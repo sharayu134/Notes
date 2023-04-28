@@ -1,0 +1,32 @@
+1.easy way to test if the js is included is to simply print console'
+
+How does javascript runs in browser
+ -> browser has the engine to convert js code to machine understandable language
+ JS ENGINES
+ -> V8 [ written in c++ ] and spider monkey [deno/node.js are there as well]
+ 
+ running .js file using node
+ -> node filename.js
+
+ ACMAscript -> was derived as too many script language kept comin
+ES6 -> ES10
+
+platform to learn w3/khanAcademy/scratch/udemy
+
+Declaring variables
+var / let / const
+
+var -> Declaring space assigning taht I know
+    string "swd"
+    bool true
+    number 3
+    var payment; -> not assigned value/type
+    console.log(payment) -> undefined 
+
+const -> If we assign value once we wont be able to 
+    change it again
+    const a ="something"
+    a="anotherThing" -> TypeError: Assignment to constant variable.
+
+taking user input on js 
+    userinout = prompt("Hey user enter something") //looks lile alert basically
