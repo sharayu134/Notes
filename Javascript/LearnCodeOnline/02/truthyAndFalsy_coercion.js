@@ -9,7 +9,7 @@ var user = "2";
 
 if (2 == user) {
   console.log("Condition is true");
-} //prints it and its called cohersion
+} //prints it and its called coercion
 
 if (2 == user) {
   console.log("Condition is true");
