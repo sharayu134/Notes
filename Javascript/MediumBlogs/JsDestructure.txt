@@ -1,0 +1,47 @@
+Javascript Object destructuring is a better way of accessing object properties without having to refer to the object all the time.
+I employ object destructuring a lot in my ReactJs projects and it saves me a lot of time.
+
+
+
+const toDo = {
+task: "Code Everyday for atleast 1 hour, Thank me later.",
+saveTime:"do the above and save time",
+}
+//common practice way of refering to keys
+console.log(toDo.task); 
+//result: Code Everyday for atleast 1 hour, Thank me later.
+
+const toDo = {
+task: "Code Everyday for atleast 1 hour, Thank me later.",
+saveTime:"do the above and save time",
+}
+//best practice: object destructuring
+const {task, saveTime } = toDo;
+console.log(task);
+//result: Code Everyday for atleast 1 hour, Thank me later.
+
+
+/days object is nexted in toDo object
+const toDo = {
+task: "Code Everyday for atleast 1 hour, Thank me later.",
+saveTime:"do the above and save time",
+days: {dayOne:"monday", dayTwo:"Tuesday"},
+}
+//best practice: object destructuring
+const {task, saveTime, days:{dayOne,dayTwo} } = toDo;
+console.log(dayOne);
+//result: monday.
+
+const toDo = {};
+//assigning a property
+toDo["task"] = "Code Everyday for atleast 1 hour, Thank me later."
+
+
+const toDo = {
+task: "Code Everyday for atleast 1 hour, Thank me later.",
+saveTime:"do the above and save time",
+}
+//defining a nested object, days
+const {task, saveTime, days:{dayOne} = "monday" } = toDo;
+console.log(dayOne);
+//result: monday.
