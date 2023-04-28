@@ -1,9 +1,9 @@
-//TODO: falsy
-// undefined
-// null
-// 0
-// ''
-// NaN
+undefined   {variable which is notgiven a value but defined var myVariable; - and this is never assigned a value }
+null     { is when we are supposed to get the value from somewhere but we did not receive it, like fx rate came null from service // intentional absence of any object value }  
+0       { zero is zero number zero}
+''      { empty string }
+None     { https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN#:~:text=NaN%20is%20a%20property%20of,the%20case%2C%20avoid%20overriding%20it.
+        Failed number conversion (e.g. explicit ones like parseInt("blabla"), Number(undefined), or implicit ones like Math.abs(undefined))}
 
 var user = "2";
 
