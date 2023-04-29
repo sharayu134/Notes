@@ -14,7 +14,11 @@ const result = myNumber.filter((num) => num > 55);
 
 var users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"];
 
-// console.log(users.slice(1));
+// console.log(users.slice(1,3)); // slice is like cuttting cake and taking it's
+// slice out   here 1 is start and 3 is end 
+// 1 is start  [inclusive indexes start with 0]
+// 3 is end     [exclusive indexes start with 0]
+// ans will be ["Ted", "Sam", "Sor", "Sod"];
 users.splice(1, 3, "HI", "BYE");
 // users.splice()
 console.log(users);
