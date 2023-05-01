@@ -28,5 +28,5 @@ int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
    names.add("Robert");  
     names.add("Mery");
   ### String[] namesArray = names.toArray(new String[0]) 
-  ### Set<T> set = new HashSet<>(Arrays.asList(array));
+  ### Set<T> set = new HashSet<>(Arrays.asList(array)); // dont try this doesn't work  use for each 
 
