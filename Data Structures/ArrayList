@@ -4,3 +4,5 @@
  _> basically I'm dealing with dynamic array who will increase it's size twice as earlier size gets filled up
  
  https://www.javatpoint.com/java-arraylist
+ 
+ ### Collections.min(myList))
