@@ -14,7 +14,10 @@
 ## pattern for at least one digit /d -> using regex
   `
    import java.util.regex.*;Pattern p = Pattern.compile(".*\\d+.*");
+   
    Matcher m = p.matcher(s);
+   
    m.matches() //return true or false
+   
    m.count()  //returns number
   `
