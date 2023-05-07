@@ -11,3 +11,8 @@ Easily get the relations between Foreign keys of table | As tables are in totaly
 Not a distributed system | Distributed System |
 . | Autonomous, one task  |
 . | **Build Test Deploy dependently** -VIMp if your service depends on any of these for other service it's not a Microservice |
+
+# Microservice resilence
+## microservice should get back to normal after something happens some damage happens
+## Circuit breaker pattern -> third party api dies if your service keeps calling tird party in endless looop not good, so you have to limit number of requests or responses to some threshold 
+##  Stateless Services -> copy of services that can work as original 
