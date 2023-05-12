@@ -1,6 +1,6 @@
 # AngularNotes
 
-ES - EcmaScript - javascript versions
+ES - EcmaScript - javascript versions  
 
 ng lint - to check the coding standards like new line removed
 
