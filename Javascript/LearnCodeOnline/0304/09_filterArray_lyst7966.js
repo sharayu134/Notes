@@ -19,6 +19,10 @@ var users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"];
 // 1 is start  [inclusive indexes start with 0]
 // 3 is end     [exclusive indexes start with 0]
 // ans will be ["Ted", "Sam", "Sor", "Sod"];
+
+
+var users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"];
+splice is at position 1 add two element and remove three elemnst
 users.splice(1, 3, "HI", "BYE");
-// users.splice()
-console.log(users);
+// users.splice()  ["Ted", "HI", "BYE", "Sor", "Sod"];
+console.log(users); 
