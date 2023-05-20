@@ -1,3 +1,10 @@
+## find will always look for parent and it will stop when it gets the same value as key for parent 
+
+## we have parent and ranks map, parent map has always the parent, and rank will have the elements under it, but always try to keep parent the heighest herrach one as it will simplify the code, for newly added noce it's parent will be she itself and initial rank will be one , now we have to do union and find for each 
+
+## if ranks are same we can add at any positions 
+
+## the one with greater rank will become parent for other one also it's rank will becme addition of it's rank + rank of second parent
 ```  boolean union( HashMap<Integer,Integer> par ,HashMap<Integer,Integer> rank, int[]edge ){
         int p1= find(edge[0], par);
         int p2= find(edge[1], par );
