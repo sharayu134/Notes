@@ -14,4 +14,5 @@
   ### PQ<type> q = new PQ <Nothing is here but it is compulsory for priority queue> ((x,y)-> y-x); // reverse
   ### PQ<type> q = new PQ <compulsory> ((x,y)-> Integer.compare(x,y));
   ### PQ<type> q = new PQ <compulsory> ((x,y)-> x.compareTo(y));
+  ### PriorityQueue<Pair<Integer,Integer>>pq = new PriorityQueue<>((a,b)->b.getKey()-a.getKey()); vvimp IF REQURED TO USE A CLASS WITH TWO FIELDS this is helpfull as it has the getter alrady
   
