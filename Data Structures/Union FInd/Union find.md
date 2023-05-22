@@ -1,6 +1,8 @@
 
 ## find will always look for parent and it will stop when it gets the same value as key for parent 
 
+code has path compresion look at that
+
 ## we have parent and ranks map, parent map has always the parent, and rank will have the elements under it, but always try to keep parent the heighest herrach one as it will simplify the code, for newly added noce it's parent will be she itself and initial rank will be one , now we have to do union and find for each 
 
 ## if ranks are same we can add at any positions 
@@ -23,7 +25,7 @@
     int find(int key, HashMap<Integer,Integer> par){
         if(key == par.get(key)) return key;
         int p = find(par.get(key), par);
-        par.put(key, p);
+        par.put(key, p); // here I'm updating the parent for path compression alpha parent will be the parent now
         return p;
     }
     ```
