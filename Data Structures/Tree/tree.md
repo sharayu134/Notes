@@ -11,6 +11,16 @@ https://www.youtube.com/watch?v=IpyCqRmaKW4
 2. **Inorder** < left >< root >< right > 
 3. **Postorder** < left >< root >< right >
 
+```     void getOrder(TreeNode root){
+        if(root==null)
+            return;
+            // root printed/used here preorder 
+        getOrder(root.left);
+            // root printed/used here inorder
+        getOrder(root.right);
+            // root printed/used here postorder
+    }
+```
 
 
 
