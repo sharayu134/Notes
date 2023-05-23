@@ -22,7 +22,6 @@ async
 junit mockito
 inner query
 
-union find
 bin search
 avl
 trie gayle mcdowell
