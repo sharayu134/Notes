@@ -24,9 +24,10 @@ inner query
 
 binary search tree
 avl self balancing BST
-trie gayle mcdowell
+trie gayle mcdowell -> https://www.youtube.com/results?search_query=hackerrank+trie 2 vids
 segment tree (interval tree)
 graph algo all sec -> min spanning tree, shortest path all algo, eulerian circuit/path
 dynamic programing
 binnary indexed fenwick tree
 suffix array
+String algorithms sliding window/KMP knuthmorest
