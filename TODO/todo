@@ -22,11 +22,11 @@ async
 junit mockito
 inner query
 
-bin search
-avl
+binary search tree
+avl self balancing BST
 trie gayle mcdowell
-binnary indexed fenvik tree
-segment tree
-suffix array
-graph algo alll sec -> min spanning tree
+segment tree (interval tree)
+graph algo all sec -> min spanning tree, shortest path all algo, eulerian circuit/path
 dynamic programing
+binnary indexed fenwick tree
+suffix array
