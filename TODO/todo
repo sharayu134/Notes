@@ -22,7 +22,6 @@ async
 junit mockito
 inner query
 
-binary search tree
 avl self balancing BST
 trie gayle mcdowell -> https://www.youtube.com/results?search_query=hackerrank+trie 2 vids
 segment tree (interval tree)
@@ -31,3 +30,4 @@ dynamic programing
 binnary indexed fenwick tree
 suffix array
 String algorithms sliding window/KMP knuthmorest https://www.youtube.com/results?search_query=string+algorithms
+google foo bar
