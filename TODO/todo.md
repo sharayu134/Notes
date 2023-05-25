@@ -1,4 +1,5 @@
 templats static class
+
 reference in java
 linked list cycle solving leetcode problem
 compator implementation
@@ -22,8 +23,16 @@ async
 junit mockito
 inner query
 
+
+
+~~union find~~
+
+~~binary search tree~~
+
 avl self balancing BST -> https://leetcode.com/problems/balance-a-binary-search-tree/
+
 ~~trie gayle mcdowell ->~~ https://www.youtube.com/results?search_query=hackerrank+trie 2 vids
+
 segment tree (interval tree)
 graph algo all sec -> min spanning tree, shortest path all algo, eulerian circuit/path
 dynamic programing
