@@ -2,7 +2,7 @@ https://www.youtube.com/watch?v=-urNrIAQnNo&ab_channel=LukasVyhnalek
 
 # Trie  [ redix tree, prefix tree ]
 
-1. When we do google the google autocompletes it, this can be done with trie
+1. When we do google the google autocompletes it, this can be done with trie , spellcheck
 2. This is how trie node will look like (keys are usually string)
 ```
 class Node{
