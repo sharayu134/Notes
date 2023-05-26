@@ -11,3 +11,4 @@
 3. select 0th node, all the edges of the node and weight to the queue
 4. pop the q till visited reaches n-1
 5. we should not visit a visited node,  if not visited mark visited, add the weight, add the edge
+6. https://leetcode.com/problems/min-cost-to-connect-all-points/description/
