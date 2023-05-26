@@ -29,11 +29,11 @@ inner query
 
 ~~binary search tree~~
 
-avl self balancing BST -> https://leetcode.com/problems/balance-a-binary-search-tree/
+~~avl self balancing BST~~ -> https://leetcode.com/problems/balance-a-binary-search-tree/
 
 ~~trie gayle mcdowell ->~~ 
 
-segment tree (interval tree)
+~~segment tree (interval tree)~~ -> https://leetcode.com/problems/queue-reconstruction-by-height/
 
 graph algo all sec -> min spanning tree, shortest path all algo, eulerian circuit/path
 
