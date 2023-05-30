@@ -1,10 +1,10 @@
-##convert int to char 
-###int cnt =0;
-###char a  = (char) (cnt+'0');
+## convert int to char 
+### int cnt =0;
+### char a  = (char) (cnt+'0');
 
-##basic == works with character **
-###char k ='k'; char k1 ='l';
-###if(k==k1) this is false and works
+## basic == works with character **
+### char k ='k'; char k1 ='l';
+### if(k==k1) this is false and works
 
 * s.charAt(j) to get char at index in String
 
