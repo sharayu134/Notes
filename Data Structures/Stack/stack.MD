@@ -10,4 +10,6 @@ stk.push(element);
 stk.pop(); // returns removed element
 stk.peek(); returns top element without removing it
 stk.isEmpty();
-stk.size();```
+stk.size();
+s.remove(0)
+```
