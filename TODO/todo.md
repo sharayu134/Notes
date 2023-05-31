@@ -35,7 +35,8 @@ inner query
 
 ~~segment tree (interval tree)~~ -> https://leetcode.com/problems/queue-reconstruction-by-height/
 
-graph algo all sec -> min spanning tree, shortest path all algo, eulerian circuit/path
+graph algo all sec -> ~~min spanning tree~~, shortest path all algo, eulerian circuit/path
+https://leetcode.com/problems/unique-paths/
 
 dynamic programing
 
