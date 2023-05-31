@@ -7,6 +7,7 @@
         }
         
  ## str.contains("-") 
+ ## str.equals(str1) returns true or false, we can compare any object with equals
  
  ## Links 
  1. https://www.w3schools.com/java/java_ref_string.asp
