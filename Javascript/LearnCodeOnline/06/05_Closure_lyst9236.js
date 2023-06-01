@@ -47,3 +47,6 @@ console.log(add5(5));
 
 console.log(doAddition(5)(5));
 //doAddition()()() //curring
+
+// how to remember currying 
+// it's making a curry just ad ()()()
