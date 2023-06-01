@@ -6,6 +6,10 @@
 // here in context everything is registered even if it's order is not as we follow in java
 
 if (2 === "2") {
+  console.log("This is false");
+}
+
+if (2 == "2") {
   console.log("This is true");
 }
 
