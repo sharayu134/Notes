@@ -88,8 +88,6 @@ Promise.all(
 // D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>node ext.js
 // message
 // [ 'message', 'message1', 'message2' ]
-
-// D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>
   
   
 Promise.race(
@@ -99,4 +97,3 @@ Promise.race(
 // D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>node ext.js
 // message
 
-// D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>
