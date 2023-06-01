@@ -26,3 +26,5 @@ const dj = {
 // djInfo(); // so in the end we have to execute it bind will return refrence
 
 hitesh.getInfo.call(dj); 
+
+// to remember binding is lagna
