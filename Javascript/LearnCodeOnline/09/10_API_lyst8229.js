@@ -18,3 +18,5 @@ fetch("https://api.chucknorris.io/jokes/random")
   .then(()=>{}) 
   .then((response)=>{console.log(response);return "somethig"})
   .then((data) => {console.log(data)})
+
+https://www.youtube.com/watch?v=cuEtnrL9-H0&ab_channel=WebDevSimplified
