@@ -10,6 +10,7 @@ How does javascript runs in browser
 
  ACMAscript -> was derived as too many script language kept comin
 ES6 -> ES10
+ECMAScript is a JavaScript standard intended to ensure the interoperability of web pages across different web browsers. It is standardized by Ecma International in the document ECMA-262.
 
 platform to learn w3/khanAcademy/scratch/udemy
 
