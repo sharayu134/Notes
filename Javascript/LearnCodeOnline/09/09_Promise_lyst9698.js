@@ -97,3 +97,46 @@ Promise.race(
 // D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>node ext.js
 // message
 
+
+//  nested promise
+
+function p(inp){
+    return new Promise((resolve, reject )=>{
+    a = 1+inp;
+    if(a===2){
+        resolve(2)
+    }else{
+        reject("error")
+    }
+})}
+function p1 (inp){
+    return new Promise((resolve, reject )=>{
+    a = 1+inp;
+    if(a===3){
+        resolve(3)
+    }else{
+        reject("error")
+    }
+})}
+
+
+p(1).then((res)=>{
+    return p1(res);
+}).then((re)=>{
+    console.log(re)
+}).catch((er)=>{
+    console.log(er)
+})
+
+// just replace with async await
+const dumb = async function myfunc(){
+    try{
+        let j = await p(1)
+        let o = await p1(j)
+        console.log(o)
+    }catch{
+        console.log("error")
+    }
+   
+}
+// with async await always use try catch to handle error
