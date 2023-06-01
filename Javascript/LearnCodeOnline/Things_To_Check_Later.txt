@@ -7,3 +7,4 @@ currying
 prototype change
 // Array functions in js
 MDN for js 
+none any type
