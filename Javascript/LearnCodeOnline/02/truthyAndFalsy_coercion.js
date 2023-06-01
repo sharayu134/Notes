@@ -16,3 +16,5 @@ if (2 == user) {
 } //it will not print the statement this is why we use ===
 
 // console.log("2" + "2");
+
+
