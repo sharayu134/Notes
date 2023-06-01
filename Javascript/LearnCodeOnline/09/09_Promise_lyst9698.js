@@ -85,18 +85,18 @@ Promise.all(
 ).then((msg)=>{ console.log(msg)}   )
 
 // output
-D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>node ext.js
-message
-[ 'message', 'message1', 'message2' ]
+// D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>node ext.js
+// message
+// [ 'message', 'message1', 'message2' ]
 
-D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>
+// D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>
   
   
 Promise.race(
     [p,p1,p2]
 ).then((msg)=>{ console.log(msg)}   )
 // output
-D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>node ext.js
-message
+// D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>node ext.js
+// message
 
-D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>
+// D:\LEARNING\javascript\HTMLCSSJSBASIC Layout>
