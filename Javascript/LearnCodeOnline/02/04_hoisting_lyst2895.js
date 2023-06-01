@@ -29,3 +29,9 @@ console.log(name); //hitesh
 //  -> global contexts scans and makes "variables" -> "undefined"
 
  // This is the eternal truth be it any situationS
+
+// how to remember hoisting, hoisting is lets say we are hoisting a flag
+// for us flag is function f is common
+// so flag = myfuncname()
+// we just hoisted a flag/ function 
+// now the defination of hoisted function is wherever doesn't matter
