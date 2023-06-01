@@ -3,12 +3,3 @@ use typeOf to get the type of the variable being used
 ternary operator
  (condition )? (if true do something) : (if false do this)
  
- 
-undefined   {variable which is notgiven a value but defined var myVariable; }
-null    { is when we are supposed to get the value from somewhere but we did not receive it, like fx rate came null from service }  
-0
-''
-None
- 
- 
- 
