@@ -3,8 +3,7 @@ boilerplate
 templates
 throttling
 polifill
-currying
-prototype change
+
 // Array functions in js
 MDN for js 
-none any type
+none any type in typescript
