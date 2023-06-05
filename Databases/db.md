@@ -15,4 +15,21 @@
 ## Durability -> permanent update, if power failure there should not be any data loss
 ![image](https://github.com/sharayu134/Notes/assets/43854821/80095559-4478-4377-af62-144456980fa9)
 
+# Scaling 
+## Vereticle scaling
+1. increasing RAM, memory, machine related things, better CPU
+2. query optimization
+3. manager worker pattern  ![image](https://github.com/sharayu134/Notes/assets/43854821/acc99dde-c0eb-4776-bb02-03cef1858195)
+4. circular manager worker ![image](https://github.com/sharayu134/Notes/assets/43854821/1b8d298e-8ef0-4937-8b8d-a2195f7e8a27)
+-> eventual consistency and latency
+5. partitions ![image](https://github.com/sharayu134/Notes/assets/43854821/4e75b7fd-aa93-4145-8ac0-0296b11dd6d6) partition animal table and employee table in different databases
+6. Sharding like hashmap, key can give back same data key is searched in different dbs ![image](https://github.com/sharayu134/Notes/assets/43854821/04b3fed3-82f4-4bf6-9bc2-9d00838a6cc4)
+7. Data center ![image](https://github.com/sharayu134/Notes/assets/43854821/9cc826ef-340e-4b64-aa50-7271f951a857)
+8. read write layers![image](https://github.com/sharayu134/Notes/assets/43854821/368028b5-2f18-43be-b5af-6557ca2287bd)
+9. Saas -> aws 
+
+
+
+ 
+
 
