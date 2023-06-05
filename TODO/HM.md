@@ -7,4 +7,5 @@
 7. aws lmbda what is serverless lambda pros cons cost saving
 8. flowable db activity dats
 9. technologies used good at
-10. kAFKA
+10. javascript
+11. kAFKA
