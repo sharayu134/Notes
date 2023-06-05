@@ -1,5 +1,5 @@
 1. database ACID joins transaction management
-2. oops solid, design patters, abstract interface, functional interface,lambda function, java 8 feature ,map collector filter stream 
+2. oops solid-> free code camp, design patters, abstract interface, functional interface,lambda function, java 8 feature ,map collector filter stream 
 3. system design oops low level parking
 4. flowable db activity dats
 5. technologies used good at
