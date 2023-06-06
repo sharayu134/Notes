@@ -7,8 +7,19 @@
 ![image](https://github.com/sharayu134/Notes/assets/43854821/af23eb17-6ac6-4e4e-b5ba-42a496fe739f)
 here this is what implemented is wrong
 5. **I** Interface segration , interface should not be a large one but be separated in different smaller interfaces, now for calculating volume there should be a different interface to calculate volume as that's only for 3D objects
-6.  **D** Dependency Inversion
-7.  By including the @Qualifier annotation, together with the name of the specific implementation we want to use, in this example Foo, we can avoid ambiguity when Spring finds multiple beans of the same type.
-8. Two dbs find primasry -> There's another annotation called @Primary that we can use to decide which bean to inject when ambiguity is present regarding dependency injection. This annotation defines a preference when multiple beans of the same type are present. The bean associated with the @Primary annotation will be used unless otherwise indicated.
-9. https://www.tutorialspoint.com/hibernate/hibernate_caching.htm
-10. https://www.tutorialspoint.com/difference-between-get-and-load-in-hibernate
+6.  **D** Dependency Inversion -> components should depend on abstraction and not concretions, try adding interfaces whereever possible 
+**Instead of**
+class a {
+    B b = new B(parameter c, d, e)}
+**use**
+class a{
+   B b;
+a(B b){
+   this.b = b;
+  }
+}
+So each time you change class a's constructor you don't need to change class b
+8.  By including the @Qualifier annotation, together with the name of the specific implementation we want to use, in this example Foo, we can avoid ambiguity when Spring finds multiple beans of the same type.
+9. Two dbs find primasry -> There's another annotation called @Primary that we can use to decide which bean to inject when ambiguity is present regarding dependency injection. This annotation defines a preference when multiple beans of the same type are present. The bean associated with the @Primary annotation will be used unless otherwise indicated.
+10. https://www.tutorialspoint.com/hibernate/hibernate_caching.htm
+11. https://www.tutorialspoint.com/difference-between-get-and-load-in-hibernate
