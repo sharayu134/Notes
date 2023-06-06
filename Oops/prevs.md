@@ -8,6 +8,8 @@
 here this is what implemented is wrong
 5. **I** Interface segration , interface should not be a large one but be separated in different smaller interfaces, now for calculating volume there should be a different interface to calculate volume as that's only for 3D objects
 6.  **D** Dependency Inversion -> components should depend on abstraction and not concretions, try adding interfaces whereever possible 
+![image](https://github.com/sharayu134/Notes/assets/43854821/47ab93b7-2628-49ea-a5fa-26ecd1472c5c)
+Here middle layer acts as adaptor, if you want to switch from stripe to paypal you can use adaptor to change every thing no need to change any other class
 **Instead of**
 class a {
     B b = new B(parameter c, d, e)}
