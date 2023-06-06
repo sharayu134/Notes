@@ -10,6 +10,6 @@
 * other classes implements interface
 * **multiple interface**
 * cannot instanciate
-* Loose coupling -> 
+* **Loose coupling** -> 
     Lets say you are using a parent class which is being extended by many other classes, as soon as the parent class changes children classess also do change
     but when you have an interface, when other classes are implementing it they have their own definition, if any class changes it's definition it doesn't matter for others
