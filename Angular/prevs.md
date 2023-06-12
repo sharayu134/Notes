@@ -10,4 +10,4 @@
 | aot | https://angular.io/guide/aot-compiler |
 | | https://www.freetimelearning.com/online-quiz/angular-quiz-que-ans.php?&id=39 |
 |angualr as mvc | https://data-flair.training/blogs/angularjs-mvc/ |
-| any none | ????
+| any none | https://www.tutorialsteacher.com/typescript/typescript-any https://decipher.dev/30-seconds-of-typescript/docs/none/#:~:text=Returns%20true%20if%20the%20provided,in%20a%20collection%2C%20false%20otherwise.
