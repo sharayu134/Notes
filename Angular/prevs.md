@@ -9,4 +9,5 @@
 | filters | https://www.w3schools.com/angular/angular_filters.asp |
 | aot | https://angular.io/guide/aot-compiler |
 | | https://www.freetimelearning.com/online-quiz/angular-quiz-que-ans.php?&id=39 |
+|angualr as mvc | https://data-flair.training/blogs/angularjs-mvc/ |
 | any none | ????
