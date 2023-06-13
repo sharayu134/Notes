@@ -11,6 +11,7 @@ Easily get the relations between Foreign keys of table | As tables are in totaly
 Not a distributed system | Distributed System |
 . | Autonomous, one task  |
 . | **Build Test Deploy dependently** -VIMp if your service depends on any of these for other service it's not a Microservice |
+. | **testing deploying scaling is easier** |
 
 # Microservice resilence
 ## microservice should get back to normal after something happens some damage happens
