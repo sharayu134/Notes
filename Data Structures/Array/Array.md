@@ -1,6 +1,8 @@
 1. String[] cars;
 2. String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 3. System.out.println(cars.length);
+4. Sort 2d arrays Arrays.sort(intervals, (a,b)-> a[0]-b[0]);
+
 
 
 for (int i = 0; i < cars.length; i++) {
