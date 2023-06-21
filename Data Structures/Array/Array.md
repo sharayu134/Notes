@@ -25,6 +25,7 @@ int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
  ###  List<String> ls = Arrays.asList(cars); 
  
  ## convert List to array 
+ //2d  int arr[][]arr = list.toArray(new int[res.size()][2]);
   List<String> names = new LinkedList<String>();  
   names.add("James");  
    names.add("Robert");  
