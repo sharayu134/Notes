@@ -7,3 +7,6 @@
  
  ### Collections.min(myList))
  ### Collections.sort(myList))
+
+ list.remove(Integer.valueOf(2)); use always Integer.valueOf() if you want to remove the value and not index
+ list.remove(2) will remove the element at index 2
