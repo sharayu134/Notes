@@ -1,3 +1,5 @@
+Functions https://www.geeksforgeeks.org/arraylist-in-java/
+ 
  Arraylist provides a dynamic array that can be expanded when needed. 
  In Array, we have to specify the size of the Array during initialization, but it is not necessary for ArrayList. By default, it takes its size to 10.
  
