@@ -14,5 +14,5 @@
             System.out.print(str + " ");
     }`
  
- ## add(), remove(), removeFirst(). removeLast(), getLast(), getFirst(), addFirst(), addLast()
+ ## add(), remove(), removeFirst(). removeLast(), getLast(), addFirst(), addLast()
  ## [methods] (https://www.geeksforgeeks.org/linked-list-in-java/)   
