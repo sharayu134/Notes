@@ -1,6 +1,9 @@
-#         HashMap<String, String> map = new HashMap(); String can be any object
-#  map.containsKey(arr[i]) -> return true or false /  map.put(key, val); / map.get(key); 
-#   map.containsValue() is also there
+# HashMap<String, String> map = new HashMap(); String can be any object
+# map.containsKey(arr[i]) -> return true or false / 
+# map.containsValue() is also there
+# map.put(key, val); 
+# map.get(key); 
+# map.getOrDefault(0);
 ## for (Map.Entry<String,String> entry : gfg.entrySet()) 
 ##            System.out.println("Key = " + entry.getKey() +
 ##                             ", Value = " + entry.getValue());
