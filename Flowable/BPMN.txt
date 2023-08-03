@@ -1,0 +1,3 @@
+BPMN 2.0 is an open standard notation system based on a flowcharting technique that is used to model business processes. The standard is widely used in business process management since it is easily understood by business users while also providing technical users with the ability to represent and implement complex processes.
+Business Process Model and Notation (BPMN) 
+https://www.processmaker.com/blog/what-is-the-bpmn-2-0-standard/

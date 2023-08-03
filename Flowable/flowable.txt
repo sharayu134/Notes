@@ -1,0 +1,9 @@
+https://www.flowable.com/open-source/docs/bpmn/ch02-GettingStarted
+
+https://medium.com/swlh/implement-flowable-engine-using-java-e437061b6773
+
+Execution Process Activity
+
+Process is middlefield-consumer-account-opening
+serviceTask  - document creation service task
+executionListener - formObserver
