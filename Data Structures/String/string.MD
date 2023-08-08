@@ -23,5 +23,5 @@
    m.count()  //returns number
 
 ### return s.substring(i, j);   i inclusive, j exclusive
-
+### compare strings arr[i].equals("null"))
   `
