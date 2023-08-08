@@ -12,5 +12,4 @@ stk.peek(); returns top element without removing it
 stk.isEmpty();
 stk.size();
 s.remove(0)
-https://www.baeldung.com/java-stack
 ```
