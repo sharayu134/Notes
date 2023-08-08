@@ -12,3 +12,14 @@ Functions https://www.geeksforgeeks.org/arraylist-in-java/
 
  list.remove(Integer.valueOf(2)); use always Integer.valueOf() if you want to remove the value and not index
  list.remove(2) will remove the element at index 2
+
+ ### Comparator
+ 
+        ArrayList<String>ls = new ArrayList(map.values());
+        Collections.sort(ls,((x,y)->{
+            if(y.length() == x.length()) {
+                return x.charAt(0) - y.charAt(0);
+            }
+            return y.length()-x.length();
+        }));
+
