@@ -24,4 +24,5 @@
 
 ### return s.substring(i, j);   i inclusive, j exclusive
 ### compare strings arr[i].equals("null"))
+### string to integer Integer.parseInt(arr[i])
   `
