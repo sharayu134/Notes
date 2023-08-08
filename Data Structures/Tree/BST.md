@@ -5,7 +5,8 @@
 5. Complexity fpr every operation  is log(n) -> height of the tree worst is O(n) when tree is line
 6. Insertion -> start with root compare with root small go to left if greater go to right if null insert new node
 7. find -> compare with root value if smaller got to left if greater got to right if equal return 0 if null return -1 not found
-8. Remove -> find the value to be removed as Node
+8. Inorder traversal will print all the element in order as BST will have smallest element in leftmost leaf 
+9. Remove -> find the value to be removed as Node
    * If Node is null remove the node directly no impact
    * If one of the subtree of Node is null then make the one and only one subtree as next of Node's parent [right or left is null]
    * If both the trees are present the we have two options to replace the Node
