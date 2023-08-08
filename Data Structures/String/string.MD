@@ -21,4 +21,7 @@
    m.matches() //return true or false
    
    m.count()  //returns number
+
+### return s.substring(i, j);   i inclusive, j exclusive
+
   `
