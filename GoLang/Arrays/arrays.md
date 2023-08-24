@@ -1,5 +1,6 @@
 
 	```
+ 
  	var books = [10] string // declaration
      	var books = [5] uint {}  //with no element
     	var books = [6] bool {true, false, false} // with elements
@@ -10,4 +11,4 @@
 	fmt.Println(books[0])
 	books[0] = "kk"
 	fmt.Println(books)
-```
+ 	fmt.Println(len(books))
