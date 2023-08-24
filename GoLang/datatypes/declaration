@@ -1,3 +1,7 @@
 	// conf := 0
 	const a = 40
  var tickets int = 90
+
+taking input 
+	fmt.Scan(&conf)
+	fmt.Printf(" a %v %v s \n", conf, a)
