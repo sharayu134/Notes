@@ -5,3 +5,4 @@
 *  compiled language compiles into single binary main.gp -> myapp.exe
 https://go.dev/tour/list
 *  golang compiler https://www.pluralsight.com/blog/software-development/the-go-compiler
+*  run vs build https://blog.devgenius.io/go-build-vs-go-run-baa3da9715cc
