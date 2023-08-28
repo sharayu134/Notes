@@ -12,3 +12,12 @@
 	books[0] = "kk"
 	fmt.Println(books)
  	fmt.Println(len(books))
+
+  dynamic array 
+  
+        var ar []string
+	ar[0] = "s"
+	fmt.Print(ar)
+
+
+  
