@@ -1,6 +1,6 @@
 
 	```
- 
+ %% Arrays
  	var books = [10] string // declaration
      	var books = [5] uint {}  //with no element
     	var books = [6] bool {true, false, false} // with elements
@@ -13,7 +13,7 @@
 	fmt.Println(books)
  	fmt.Println(len(books))
 
-  dynamic array 
+  dynamic array  %% Slices
   
         var ar []string
 	ar[0] = "s"
