@@ -1,0 +1,44 @@
+
+To return an ExitError in Go, you can use the os.Exit() function along with creating an instance of the ExitError type from the os package. Here's an example:
+
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	// Simulating an error
+	err := someFunction()
+
+	if err != nil {
+		// Create an instance of ExitError
+		exitErr := &ExitError{code: 1, msg: fmt.Sprintf("An error occurred: %s", err.Error())}
+
+		// Use os.Exit to terminate the program with the ExitError
+		os.Exit(exitErr.ExitCode())
+	}
+
+	fmt.Println("Program completed successfully")
+}
+
+// Custom ExitError type
+type ExitError struct {
+	code int
+	msg  string
+}
+
+func (e *ExitError) Error() string {
+	return e.msg
+}
+
+func (e *ExitError) ExitCode() int {
+	return e.code
+}
+
+func someFunction() error {
+	// Simulating an error
+	return fmt.Errorf("Some error occurred")
+}
+In the above code, the someFunction() returns an error which we check for in the main() function. If an error occurs, we create an instance of ExitError, set the exit code and error message, and then call os.Exit() with the exit code of the ExitError instance.
