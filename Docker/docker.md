@@ -17,7 +17,12 @@
 
 * docker image vs docker container
 * ![Uploading image.png…]()
-* one image multiple container / instance
+* one image can have multiple container / instance
+
+* Docker Registery
+* storage for image distribution
+* biggest docker registry -> biggest docker Hub -> all oficial images will be presenr https://hub.docker.com/
+* official image -> redis image created by redis team 
 
 
 
