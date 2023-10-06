@@ -12,7 +12,7 @@
 * How this works
 * <img width="1015" alt="image" src="https://github.com/sharayu134/Notes/assets/43854821/a21a191f-42ff-498d-b09b-45e9315bd65a">
 *  <img width="1015" alt="image" src="https://github.com/sharayu134/Notes/assets/43854821/a574f451-7ecb-486a-81d8-edd509c409ed">
-*  ![Uploading image.png…]()
+*  <img width="1015" alt="image" src="https://github.com/sharayu134/Notes/assets/43854821/c77b5c63-25a8-480b-b0dd-560a85da5f5a">
 
 
 * docker image vs docker container
