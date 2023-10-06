@@ -5,7 +5,7 @@
 * this leads to a lot of rework
 
 * with docker
-* you will have the container with all the dependencies including database
+* you will have the container with all the dependencies including database, npm, java, node
 * for each operating system docker cmds are same
 * same thing can be used for both development and deployment time
 
