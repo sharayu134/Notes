@@ -11,9 +11,13 @@
 
 * How this works
 * <img width="1015" alt="image" src="https://github.com/sharayu134/Notes/assets/43854821/a21a191f-42ff-498d-b09b-45e9315bd65a">
+*  <img width="1015" alt="image" src="https://github.com/sharayu134/Notes/assets/43854821/a574f451-7ecb-486a-81d8-edd509c409ed">
 *  ![Uploading image.png…]()
-*  ![Uploading image.png…]()
-*  
+
+
+* docker image vs docker container
+* ![Uploading image.png…]()
+* one image multiple container / instance
 
 
 
