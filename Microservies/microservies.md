@@ -17,3 +17,4 @@ Not a distributed system | Distributed System |
 ## microservice should get back to normal after something happens some damage happens
 ## Circuit breaker pattern -> third party api dies if your service keeps calling tird party in endless looop not good, so you have to limit number of requests or responses to some threshold 
 ##  Stateless Services -> copy of services that can work as original 
+https://www.atlassian.com/incident-management/kpis/sla-vs-slo-vs-sli
