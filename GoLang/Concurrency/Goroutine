@@ -1,0 +1,11 @@
+Go Routine
+Go routine is function which can run independently.
+
+Multiple go routines can run concurrenlty
+
+main(){
+    go myfunction() // go routine
+}
+myfunction(){
+  // do something
+}
