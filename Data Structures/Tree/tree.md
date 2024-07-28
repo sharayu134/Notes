@@ -23,4 +23,11 @@ https://www.youtube.com/watch?v=IpyCqRmaKW4
 ```
 
 
+Since each node in the binary tree is visited exactly once, and the operations performed at each node take constant time, the overall time complexity of the function is:
+O(n)
+
+The space complexity is determined by the call stack used in the DFS traversal. In the worst case, the depth of the tree could be 𝑛 (for a completely unbalanced tree skewed tree)
+
+O(h)
+where h is the height of the tree. For a balanced tree, h would be 𝑂 (log n)
 
