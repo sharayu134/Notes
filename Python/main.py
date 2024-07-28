@@ -4,3 +4,5 @@
 IMP
 # https://www.dataquest.io/blog/python-copy-list/
 # https://developers.google.com/edu/python/sorting   sorting with key
+
+'abcd'.startswith('ab'):  true
