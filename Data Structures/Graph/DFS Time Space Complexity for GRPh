@@ -1,0 +1,79 @@
+class Solution:
+    def maximumDetonation(self, bombs: List[List[int]]) -> int:
+        adjList = {}
+        
+        # Build the adjacency list
+        for i in range(len(bombs)):
+            adjList[i] = []
+            for j in range(len(bombs)):
+                if i != j:
+                    dist = (bombs[i][0] - bombs[j][0]) ** 2 + (bombs[i][1] - bombs[j][1]) ** 2
+                    if dist <= bombs[i][2] ** 2:
+                        adjList[i].append(j)
+        
+        # DFS function to count reachable bombs
+        def dfs(i, visited):
+            if i in visited:
+                return
+            visited.append(i)
+            for n in adjList[i]:
+                dfs(n, visited)
+        
+        maxB = 0
+        # Try detonating each bomb and count the reachable bombs
+        for n in adjList:
+            visited = []
+            dfs(n, visited)
+            if maxB < len(visited):
+                maxB = len(visited)
+
+        return maxB
+
+
+Let's analyze the time and space complexity of the provided maximumDetonation function.
+
+Code Analysis
+The code solves the problem of finding the maximum number of bombs that can be detonated starting from any single bomb. It does this by:
+
+Building an adjacency list to represent which bombs can detonate other bombs.
+Using Depth-First Search (DFS) to find the number of bombs that can be detonated starting from each bomb.
+Returning the maximum number of bombs that can be detonated from any single bomb.
+Here is the provided code with some comments for clarity:
+
+python
+Copy code
+class Solution:
+    def maximumDetonation(self, bombs: List[List[int]]) -> int:
+        adjList = {}
+        
+        # Build the adjacency list
+        for i in range(len(bombs)):
+            adjList[i] = []
+            for j in range(len(bombs)):
+                if i != j:
+                    dist = (bombs[i][0] - bombs[j][0]) ** 2 + (bombs[i][1] - bombs[j][1]) ** 2
+                    if dist <= bombs[i][2] ** 2:
+                        adjList[i].append(j)
+        
+        # DFS function to count reachable bombs
+        def dfs(i, visited):
+            if i in visited:
+                return
+            visited.append(i)
+            for n in adjList[i]:
+                dfs(n, visited)
+        
+        maxB = 0
+        # Try detonating each bomb and count the reachable bombs
+        for n in adjList:
+            visited = []
+            dfs(n, visited)
+            if maxB < len(visited):
+                maxB = len(visited)
+
+        return maxB
+Time Complexity
+Building the Adjacency List:
+
+https://chatgpt.com/share/a7583589-a18e-4a60-8eee-ab19627939bf
+
