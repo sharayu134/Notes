@@ -1,5 +1,5 @@
 
-**each node in recursion/decision tree is represents the state **
+**each node in recursion/decision tree is represents the state**
 **memoisation means saving the current state as key and the result expected as value**
 https://leetcode.com/problems/target-sum/
 Here (i, sum) is state in recursion/decision treee
