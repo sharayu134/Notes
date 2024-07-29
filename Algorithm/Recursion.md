@@ -4,6 +4,8 @@
 2. State of recursion that is what you are passing
 
 ## When making choices
+
+[example](https://leetcode.com/problems/partition-equal-subset-sum/)
 1. 0/1 knapsack problems you need to select a element or not select an element
    this can be achieved by
    ```
