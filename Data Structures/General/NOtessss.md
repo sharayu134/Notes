@@ -8,5 +8,6 @@ if not switch to another Data Structure
 1. understand question calmly
 2. ask questions
 3. share assumptions
-4. Come up with test cases
-5. **Dry run differen test cases with all the scenario edge cases**
+4. Take ineterest in problems
+5. Come up with test cases
+6. **Dry run differen test cases with all the scenario edge cases**
