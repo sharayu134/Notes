@@ -1,6 +1,6 @@
 # When Level order traversal come in play use BFS
 
-Only using **array** you can use the 
+Only using **array** you can implement BFS 
 ls is the queue of the BFS but implemented by array 
 **ls =[]**
 **ls.append()**
