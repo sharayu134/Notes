@@ -2,7 +2,7 @@
 
 Only using **array** you can implement BFS 
 ls is the queue of the BFS but implemented by array 
-**ls =[]**
+[^2] **ls =[]**
 **ls.append()**
 **ls.pop(0)** // you need to provide the index given
 
