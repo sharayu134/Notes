@@ -7,7 +7,7 @@ ls is the queue of the BFS but implemented by array
 
 **ls.append()**
 
-**ls.pop(0)** // you need to provide the index given
+**ls.pop(0)** // you need to provide the index 0 if want to remove from first end otherwise default is from last of list
 
 ```
 def build(oi, ot):
