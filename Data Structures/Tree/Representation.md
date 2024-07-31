@@ -12,9 +12,9 @@ for example using treenode instead of array will decrease the index calculation
 ```
 ## TreeNode
  ```
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+     def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 ```
