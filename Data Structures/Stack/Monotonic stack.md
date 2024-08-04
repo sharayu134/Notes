@@ -1,6 +1,10 @@
 # Monotonic stack
 
 In case of a monotonic stack it's values will always keep increasing and keep decreasing
+[1,2,3,4,66]
+
+
+[9,6,4,1]
 
 
 ## decreasing 
