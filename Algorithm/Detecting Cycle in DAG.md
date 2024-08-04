@@ -44,4 +44,4 @@ still not getting it no worries https://www.youtube.com/watch?v=9twcmtQj4DU&list
 ## EASY BFS
 
 In BFS use topological sort if the sorted array has less number of elements then it definitley has cycle as topo sort works only for DAG
-[go here] (https://github.com/sharayu134/Notes/blob/cd6127252f575aafd72d2173ff88f100c4861b6f/Algorithm/Topological%20sort.md?plain=1#L4)
+[go here](https://github.com/sharayu134/Notes/blob/cd6127252f575aafd72d2173ff88f100c4861b6f/Algorithm/Topological%20sort.md?plain=1#L4)
