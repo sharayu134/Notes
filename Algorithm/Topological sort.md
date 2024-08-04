@@ -35,3 +35,41 @@ class Solution:
 ```
 
 still not getting watch https://www.youtube.com/watch?v=5lZ0iJMrUMk&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=21&ab_channel=takeUforward
+
+## BFS 
+Here do catch is to use indegree when doing queue operations,
+set ind array with all the indegree and then if it's zero meaning the node/s is/are root node
+add it to res [ ordered list] and then for it's neighbours reduce the indegree by one and 
+if this child has indegree 0 then this will become next root node we can add it to the queue
+
+```
+class Solution:
+    
+    #Function to return list containing vertices in Topological order.
+    def topoSort(self, V, adj):
+        q = []
+        ind = [0]*V
+        res = []
+        
+        for j in range(V):
+            for k in adj[j]:
+                ind[k] +=1
+                
+        for j in range(V):
+            if ind[j] == 0:
+                q.append(j)
+  
+            
+        while len(q) != 0:
+            i = q.pop(0)
+            res.append(i)
+            
+            for chld in adj[i]:
+                ind[chld] -=1
+                if ind[chld] == 0:
+                    q.append(chld)
+                
+        return res
+```
+still not getting watch
+https://www.youtube.com/watch?v=73sneFXuTEg&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=22&ab_channel=takeUforward
