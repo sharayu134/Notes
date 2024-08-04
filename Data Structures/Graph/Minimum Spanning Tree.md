@@ -9,7 +9,10 @@
 ## Prims
 1. track visited, number of visited nodes should be n-1 as there should not be any cycles
 2. use Priority Queue to dicide who is next, priority based on weight
-3. select 0th node, all the edges of the node and weight to the queue
-4. pop the q till visited reaches n-1
-5. we should not visit a visited node,  if not visited mark visited, add the weight, add the edge
-6. https://leetcode.com/problems/min-cost-to-connect-all-points/description/
+3. select 0th node, all the edges of the node and weight to the queue as (weight, source node, dest node)
+4. pop the q
+5. explore the neighbours of dest node,
+6. we should not visit a visited node, and not the node it came from
+7. if not visited mark visited, add the weight, add the edge
+8. https://www.youtube.com/watch?v=mJcZjjKzeqk&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=45&ab_channel=takeUforward
+9. https://leetcode.com/problems/min-cost-to-connect-all-points/description/
