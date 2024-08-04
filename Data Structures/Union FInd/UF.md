@@ -1,5 +1,4 @@
-    
-    # Union Find
+# Union Find
     
  This help us to split elememnts into one or more disjoint set
 It has two primary functions -> union() and find()
