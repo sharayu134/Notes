@@ -1,7 +1,8 @@
 
 # MST
+<img width="322" alt="image" src="https://github.com/user-attachments/assets/12560efc-1efa-45ae-8e58-6f6563d3e7f4">
 
-1. connects all the nodes, min weight, no cycles
+1. connects all the nodes, min weight, no cycles, n-1 edges
 2. can be solved using Union find
 3. can be solved using prims algo
 
