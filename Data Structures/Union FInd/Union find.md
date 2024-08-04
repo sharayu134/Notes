@@ -66,3 +66,5 @@ int find(int key, HashMap<Integer,Integer> par){
     }
 
     ```
+
+still not getting it its okay go here https://www.youtube.com/watch?v=aBxjDBC4M1U&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=47&ab_channel=takeUforward
