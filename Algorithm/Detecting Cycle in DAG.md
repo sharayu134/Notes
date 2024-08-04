@@ -7,12 +7,8 @@ whenever you complete exploring the node make its pathvisited as 0 not visited
 If you are exploring the child if it's visited and not pathvisited it's valid othervise not valid
 
 ```
-#User function Template for python3
-from typing import List
 
 class Solution:
-    
-```
     def isCyclic(self, V : int , adj : List[List[int]]) -> bool :
         
         vis = [0]*V
