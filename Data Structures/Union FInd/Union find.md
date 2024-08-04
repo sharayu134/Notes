@@ -1,10 +1,30 @@
 # Union Find
     
-This help us to split elememnts into one or more disjoint set. It has two primary functions -> union() and find()
+This help us to split elememnts into one or more disjoint set which are connected/related to each other. It has two primary functions -> union() and find()
 ```
-    find() -> find the group which elelment belongs to 
-    union() -> will merge the two groups
+    find() -> find the group which elelment belongs to [parent]
+    union() -> will merge the two groups 
 ```
+
+There is rank for each element which will be 0
+rank [0,0,0,0,0]
+There is parent array of each element the parent of itself will be it
+[1,2,3,4,5]
+
+## union 
+1. union u,v
+2. find ultimate parent of both pu, pv
+3. find rank of both pu, pv
+4. attach smaller rank parent to bigger
+5. If rank different
+6.     no need to update rank but update parent of parent
+7. If rank same then upadate rank and parent both
+
+## find
+1. return parent if current parent's parent is itself
+2. otherwise do the find again
+3. save the result as parent of itself for path compression
+   
 ## path compression makes things more easier ->
 make every element point to the alpha parent node make this change while inomelenting the find ,
 **but if you want to access/use the final parent arr then you must call final(par[i]) as this will give you final paren**t **IMPVV**
