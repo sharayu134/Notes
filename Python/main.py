@@ -15,3 +15,6 @@ s = list(s)
 # s = 'cerfe'
 
 'abcd'.startswith('ab'):  true
+
+word.lower(), word.upper(), word.capitalize()
+capitalize() is for making first letter capitalised
