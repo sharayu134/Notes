@@ -18,3 +18,4 @@ s = list(s)
 
 word.lower(), word.upper(), word.capitalize()
 capitalize() is for making first letter capitalised
+word[i].isupper():
