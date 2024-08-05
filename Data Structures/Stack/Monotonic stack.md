@@ -24,3 +24,4 @@ In case of a monotonic stack it's values will always keep increasing and keep de
                 stk.pop()
             stk.append(num[i])
 ```
+[Data Structures/Stack/Monotonic stack.md](https://www.geeksforgeeks.org/how-to-identify-and-solve-monotonic-stack-problems/)
