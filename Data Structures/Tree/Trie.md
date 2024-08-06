@@ -1,4 +1,5 @@
 https://www.youtube.com/watch?v=-urNrIAQnNo&ab_channel=LukasVyhnalek
+https://www.youtube.com/watch?v=dBGUmUQhjaM&t=121s
 
 # Trie  [ redix tree, prefix tree ]
 
@@ -29,4 +30,36 @@ Hash insertions and lookups have the same complexity: for each word you need to 
 6. Delete ![image](https://github.com/sharayu134/Notes/assets/43854821/bd6222d9-e7a6-4bab-98ad-b4135c5aa059)
 ![image](https://github.com/sharayu134/Notes/assets/43854821/6e8a8f8f-2f0d-4709-8380-3d5a99c44a29)
 
- 
+
+## EASY VERSION use map to store, no need of any other class
+
+```
+class Trie:
+
+    def __init__(self):
+        self.root = {}
+        
+    def insert(self, word: str) -> None:
+        root = self.root
+        for ltr in word:
+            if ltr not in root:
+                root[ltr] = {}
+            root = root[ltr]
+        root['*']=''
+
+    def search(self, word: str) -> bool:
+        root = self.root
+        for ltr in word:
+            if ltr not in root:
+                return False
+            root = root[ltr]
+        return '*' in root
+
+    def startsWith(self, prefix: str) -> bool:
+        root = self.root
+        for ltr in prefix:
+            if ltr not in root:
+                return False
+            root = root[ltr]
+        return True
+ ```
