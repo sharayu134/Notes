@@ -1,6 +1,6 @@
 # Binary Search Tree
 
-## Inorder traversal of BST will print element in order
+## Inorder traversal of BST will print elements in order
 
 1. It's A Binary tree -> with at most two roots, [can have 0,1,2 roots]
 2. where left values are smaller than root and right values are greater
