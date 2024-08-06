@@ -1,3 +1,7 @@
+# Binary Search Tree
+
+## Inorder traversal of BST will print element in order
+
 1. It's A Binary tree -> with at most two roots, [can have 0,1,2 roots]
 2. where left values are smaller than root and right values are greater
 3. BST is not limited to only numbers tree it can be alphabet as well
