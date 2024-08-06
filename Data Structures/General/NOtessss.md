@@ -11,3 +11,7 @@ if not switch to another Data Structure
 4. Take ineterest in problems
 5. Come up with test cases
 6. **Dry run differen test cases with all the scenario edge cases**
+
+
+## IMP question see the ans as well
+bit manipulation https://leetcode.com/problems/add-binary/
