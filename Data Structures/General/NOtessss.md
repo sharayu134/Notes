@@ -15,3 +15,7 @@ if not switch to another Data Structure
 
 ## IMP question see the ans as well
 bit manipulation https://leetcode.com/problems/add-binary/
+
+## Area of triangle when three points given
+arr = abs(0.5 * (x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2)))
+
