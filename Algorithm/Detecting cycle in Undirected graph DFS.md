@@ -4,7 +4,7 @@
 ## using dfs
 
 1. pass a node i and parent p
-2. mark it visited
+2. mark node i visited
 3. go to the node and explore it's neighbours
 4. if neigbour not visited go on in dfs
 5. if neighbour visited then it could be cycle 
