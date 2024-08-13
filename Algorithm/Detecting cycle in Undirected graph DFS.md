@@ -11,7 +11,7 @@
 6. but but but but it could be parent as well as it's undirected graph [a->b] is edge aslo [b->a] is present 
 7. so if neighbour is not parent then it's a cycle
 
-'''
+```
         def dfs(k, p):
             nonlocal vis
             vis.add(k)
@@ -25,6 +25,6 @@
             # call this DFS for each node which is not yet visited as it could be graph which is not connected
 
             
-  '''
+```
 https://www.youtube.com/watch?v=zQ3zgFypzX4&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=13
   
