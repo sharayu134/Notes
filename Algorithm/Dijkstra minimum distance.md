@@ -1,5 +1,14 @@
 only see pq
 
+1. use vis, and have a min distance array for each node
+2. slect 0 as starting node and distance 0
+3. now add this to the pq
+4. starrrt popping the pq
+5. start exploring the current node
+6. add it with distance got from parent to pq
+7. only if the current distance till this node is less than the distance in distance array
+8. keep doing this while pq is not empty 
+
 https://www.youtube.com/watch?v=3dINsjyfooY&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=35&ab_channel=takeUforward
 
 https://www.youtube.com/watch?v=3dINsjyfooY&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=35&ab_channel=takeUforward
