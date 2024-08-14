@@ -16,5 +16,8 @@
    * If both the trees are present the we have two options to replace the Node
     a. largest in left subtree
     b. smallest in right subtree
-    Replace When you choose one of them, then you will have to do the same to remove as above 
+    Replace When you choose one of them, then you will have to do the same to remove as above
+
+## tree traversal can be simulated with stack do visit
+## https://leetcode.com/problems/binary-search-tree-iterator/description/?envType=company&envId=google&favoriteSlug=google-thirty-days
 
