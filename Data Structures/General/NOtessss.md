@@ -13,6 +13,15 @@ if not switch to another Data Structure
 6. **Dry run differen test cases with all the scenario edge cases**
 
 
+
+https://www.notion.so/Topics-to-Study-7e7bae203ec54bc2965f1b9a4e3dfa2f
+
+
+
+https://docs.google.com/spreadsheets/d/1esVLD_7MTVvcHqdx1HKvK4BKKkv_EzNOj8QCCj2L2jE/edit?gid=0#gid=0
+
+
+
 ## IMP question see the ans as well
 bit manipulation https://leetcode.com/problems/add-binary/
 
