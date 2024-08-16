@@ -12,3 +12,5 @@ At each step, we calculate the middle element mid = (begin + end) / 2. We use th
 If the target that we're searching for has a value lower than the mid element, we discard the right half of the array i.e. end = mid - 1.
 If the target that we're searching for has a value higher than the mid element, we discard the left half of the array i.e. begin = mid + 1.
 If nums[mid] == element, then we found our target and we return from there.
+
+## https://leetcode.com/discuss/study-guide/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems
