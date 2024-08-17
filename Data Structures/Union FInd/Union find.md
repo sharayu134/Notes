@@ -15,10 +15,11 @@ There is parent array of each element the parent of itself will be it
 1. union u,v
 2. find ultimate parent of both pu, pv
 3. find rank of both pu, pv
-4. attach smaller rank parent to bigger
+4. attach smaller rank parent to bigger parent
 5. If rank different
 6.     no need to update rank but update parent of parent
 7. If rank same then upadate rank and parent both
+8. Here **parent** is important you are updating rank and par of parents once you find the ultimate parents you don't need the u,v anymore, it's all about parent
 
 ## find
 1. return parent if current parent's parent is itself
@@ -42,28 +43,23 @@ if ranks are same we can add at any positions
  the one with greater rank will become parent for other one also it's rank will becme addition of it's rank + rank of second parent
  
 ```
- boolean union( HashMap<Integer,Integer> par ,HashMap<Integer,Integer> rank, int[]edge ){
-        int p1= find(edge[0], par);
-        int p2= find(edge[1], par );
-        if(p1==p2) return false;
 
-        if(rank.get(p1)>rank.get(p2)){
-            par.put(p2, p1);
-            rank.put(p1, rank.get(p2)+rank.get(p1));
-        }else{
-            par.put(p1,p2);
-            rank.put(p2,rank.get(p2)+rank.get(p1));
-        }
-        return true;
-     }
+ def union(a,b):
+            pa, pb = find(a), find(b)
+            if pa != pb:
+                if rank[pa]>rank[pb]:
+                    par[pb] = pa
+                elif rank[pa]<rank[pb]:
+                    par[pa] = pb
+                else:
+                    par[pa] = pb
+                    rank[pa] += 1
+            
 
-
-int find(int key, HashMap<Integer,Integer> par){
-        if(key == par.get(key)) return key;
-        int p = find(par.get(key), par);
-        par.put(key, p); // here I'm updating the parent for path compression alpha parent will be the parent now
-        return p;
-    }
+ def find(x):
+            if par[x] != x:
+                par[x] = find(par[x])
+            return par[x] 
 
     ```
 
