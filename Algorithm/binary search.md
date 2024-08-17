@@ -24,7 +24,7 @@ If the target that we're searching for has a value higher than the mid element, 
 If nums[mid] == element, then we found our target and we return from there.
 
 
-return retur **l**
+return  **l** the left element [here at the end l==r==mid]
 
 
 ## https://leetcode.com/discuss/study-guide/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems
