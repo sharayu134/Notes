@@ -137,3 +137,37 @@ The key difference between the two solutions is the handling of the return value
 Therefore, Solution1 is the correct implementation for counting closed islands.
 
 Would you like to explore any other aspects of this problem or code?
+
+
+## IMP time complexity for bfs and dfs
+
+Time Complexity of DFS and BFS: A Simple Explanation
+Imagine a maze.
+
+
+
+DFS (Depth-First Search)
+Think of DFS as exploring a maze by going as deep as possible before backtracking. You start at an entrance, pick a path, and keep going until you hit a dead end. Then, you go back to the last junction and try another path.
+
+
+
+Time complexity: You visit every room (vertex) and every door (edge) at most once. So, the time it takes is directly related to the number of rooms (vertices) and doors (edges) in the maze.
+BFS (Breadth-First Search)
+Imagine BFS as exploring a maze level by level. You start at the entrance and explore all rooms on the first floor, then move to the second floor, and so on.
+
+
+
+Time complexity: Similar to DFS, you visit every room and door at most once. So, the time it takes is also related to the number of rooms and doors.
+In both cases, the time it takes to explore the entire maze depends on the number of rooms (vertices) and doors (edges).
+
+
+
+In technical terms:
+V is the number of vertices (rooms).
+E is the number of edges (doors).
+The time complexity for both DFS and BFS is O(V + E).
+
+
+
+This means
+that the time it takes to explore the entire maze (or graph) grows linearly with the number of rooms and doors.
