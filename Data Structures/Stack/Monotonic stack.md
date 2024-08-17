@@ -25,3 +25,11 @@ In case of a monotonic stack it's values will always keep increasing and keep de
             stk.append(num[i])
 ```
 https://www.geeksforgeeks.org/how-to-identify-and-solve-monotonic-stack-problems/
+
+
+https://leetcode.com/discuss/study-guide/2347639/A-comprehensive-guide-and-template-for-monotonic-stack-based-problems
+
+### Intution
+1. next greater element, next smaller element, previous greater element and previous smaller element
+2. expression evaluation rec-> iteration
+
