@@ -32,3 +32,8 @@ return retur **l**
 
 https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/
 
+
+**Binary search in DP** LIS 
+1. https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/
+2.  https://leetcode.com/problems/russian-doll-envelopes/
+
