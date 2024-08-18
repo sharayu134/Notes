@@ -74,3 +74,8 @@ class Solution:
 ```
 still not getting watch
 https://www.youtube.com/watch?v=73sneFXuTEg&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=22&ab_channel=takeUforward
+
+# Intuition
+1. When we come to question in which one element is **dependent** on others element to complete then we have to first think of Grap and topological sorting
+2. In topo sort we add element to the q if and only if it's dependents are visited
+3. https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/solutions/1664405/beginners-friendly-well-explained-94-faster/
