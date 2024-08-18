@@ -40,3 +40,5 @@
         return dfs(0, 0)
 
    ```
+# Intuition
+1. When it comes to trying all possible solutions and finding the most optimal solution, recursion is the most natural way to implement such solutions
