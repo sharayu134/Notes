@@ -21,3 +21,6 @@
 ## tree traversal can be simulated with stack do visit
 ## https://leetcode.com/problems/binary-search-tree-iterator/description/?envType=company&envId=google&favoriteSlug=google-thirty-days
 
+# sorted container for BST
+https://www.youtube.com/watch?v=46Ni5u8qduY
+
