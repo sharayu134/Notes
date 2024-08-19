@@ -8,5 +8,5 @@
      q= [2,3,3,4,3]
      q.pop(0) #removes first element
      q.append(5) #adds new element at last
-
-```
+   
+    ```
