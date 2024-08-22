@@ -63,3 +63,6 @@ class Trie:
             root = root[ltr]
         return True
  ```
+
+
+# Trie Tree is used to speed up string match (faster than find or startwith in large query request).
