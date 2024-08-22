@@ -31,3 +31,14 @@ Left Shift (<<): Shifts the bits of a number to the left by a specified number o
 
 Right Shift (>>): Shifts the bits of a number to the right by a specified number of positions. Zeroes or ones are filled in from the left, depending on the sign of the number.
 
+
+x = 5  # Binary: 0101
+y = 2  # Number of positions to shift
+result = x << y
+print(result)  # Output: 20 (Binary: 10100)
+
+
+x = 20  # Binary: 10100
+y = 2  # Number of positions to shift
+result = x >> y
+print(result)  # Output: 5 (Binary: 0101)
