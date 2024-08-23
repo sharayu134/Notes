@@ -1,5 +1,11 @@
 go [here](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)
 
+
+https://www.youtube.com/watch?v=vRVfmbCFW7Y
+
+
+https://www.naukri.com/code360/problems/matrix-chain-multiplication_975344?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos&leftPanelTabValue=SUBMISSION
+
 # Intuition
 1. maximum/minmum
 2. few choices are given
