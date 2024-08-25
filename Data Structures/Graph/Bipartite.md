@@ -1,9 +1,23 @@
- # Biparttite
+ # Bipartite
 
-## Divide in two parts / color adj nodes with alternte two colors and colors should not repeat
+## Divide in two parts such that
+## Color adj nodes with alternte two colors 
+## and the color of two adjcent nodes should not be same
 
 https://leetcode.com/problems/is-graph-bipartite/description/
 
+# BFS
+1. get one colors array
+2. take it as forest - > for each node if not colored do this
+3. Color selected node
+4. add to Q
+5. while Q
+6. pop the node
+7. for each adjcent node if not colored color with opposite color of parent and push to Q
+8. If colored, then if adjcent node has same color as the parent then return False
+9. in main for loof if any of the node returns false ans is false
+10. return true otherwise
+11.  
 ```
 class Solution:
     def isBipartite(self, graph: List[List[int]]) -> bool:
