@@ -14,5 +14,30 @@
 5. explore the neighbours of dest node,
 6. we should not visit a visited node, and not the node it came from
 7. if not visited mark visited, add the weight, add the edge
-8. https://www.youtube.com/watch?v=mJcZjjKzeqk&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=45&ab_channel=takeUforward
-9. https://leetcode.com/problems/min-cost-to-connect-all-points/description/
+
+  ```
+import heapq
+class Solution:
+    
+    def spanningTree(self, V, adj):
+        vis = set()
+        res = 0
+        pq = [(0,0)]
+        
+        while pq:
+            wt, cur  = heapq.heappop(pq)
+            if cur in vis:
+                continue
+            vis.add(cur)
+            res+=wt
+            
+            for nei in adj[cur]:
+                n, n_wt = nei
+                if n not in vis:
+                   heapq.heappush(pq, (n_wt, n))
+                   vis.add(cur)
+
+        return res
+```
+9. https://www.youtube.com/watch?v=mJcZjjKzeqk&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=45&ab_channel=takeUforward
+10. https://leetcode.com/problems/min-cost-to-connect-all-points/description/
