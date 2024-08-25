@@ -12,6 +12,8 @@ whenever you complete exploring the node make its pathvisited as 0 not visited
 
 If you are exploring the child if it's visited and not pathvisited it's valid othervise not valid
 
+https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=detect-cycle-in-a-directed-graph
+
 ```
 
 class Solution:
