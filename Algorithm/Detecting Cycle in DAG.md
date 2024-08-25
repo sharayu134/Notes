@@ -2,8 +2,14 @@
 
 ## DFS
 Do the normal dfs, twist is to keep the pathvisited array 
+
+
 whenever you visit the node mark it as visited and pathvisited
+
+
 whenever you complete exploring the node make its pathvisited as 0 not visited
+
+
 If you are exploring the child if it's visited and not pathvisited it's valid othervise not valid
 
 ```
