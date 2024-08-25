@@ -14,6 +14,7 @@
 5. explore the neighbours of dest node,
 6. we should not visit a visited node, and not the node it came from
 7. if not visited mark visited, add the weight, add the edge
+8. https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=minimum-spanning-tree
 
   ```
 import heapq
