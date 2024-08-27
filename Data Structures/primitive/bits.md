@@ -47,4 +47,4 @@ Right Shift (>>): Shifts the bits of a number to the right by a specified number
 # IIMP
 https://leetcode.com/discuss/interview-question/3695233/all-types-of-patterns-for-bits-manipulations-and-how-to-use-it
 
-```
+There is an interview tip for bit manipulation problems: if you don't know how to start, start by computing XOR for your input data.
