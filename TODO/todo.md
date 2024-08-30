@@ -44,6 +44,10 @@ binnary indexed fenwick tree
 
 suffix array
 
+
+segment tree**
+bitmask dp**
+binary index tree*
 String algorithms sliding window/KMP knuthmorest https://www.youtube.com/results?search_query=string+algorithms
 
 google foo bar
