@@ -1,5 +1,8 @@
 
 # Segment Tree [ interval tree ]
+
+https://leetcode.com/problems/range-sum-query-mutable/editorial/
+
 1. Fast range quesries - finding sum/min/max for range of numbers 
 2. Let's say you have to get the max of arr [6,10,5,3,5,9] of size n
 3. create arr with size 2*n
