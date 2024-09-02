@@ -47,6 +47,8 @@ Right Shift (>>): Shifts the bits of a number to the right by a specified number
 
 https://www.youtube.com/watch?v=qQd-ViW7bfk&list=PLgUwDviBIf0rnqh8QsJaHyIX7KUiaPUv7
 
+### 2' complement of a is (a & (-a))
+
 # IIMP
 https://leetcode.com/discuss/interview-question/3695233/all-types-of-patterns-for-bits-manipulations-and-how-to-use-it
 
