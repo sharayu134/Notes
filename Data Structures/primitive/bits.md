@@ -44,6 +44,9 @@ Right Shift (>>): Shifts the bits of a number to the right by a specified number
   print(result)  # Output: 5 (Binary: 0101)
 
 ```
+
+https://www.youtube.com/watch?v=qQd-ViW7bfk&list=PLgUwDviBIf0rnqh8QsJaHyIX7KUiaPUv7
+
 # IIMP
 https://leetcode.com/discuss/interview-question/3695233/all-types-of-patterns-for-bits-manipulations-and-how-to-use-it
 
