@@ -29,11 +29,11 @@ with bitmasking
         n = len(nums)
         res = []
         
-        for i in range(0,1<<n):
+        for i in range(0,1<<n): # run 2**n time [1<<n is equal to 2**n]
             ans = []
             k = 1
             j = 1
-            while k < (2**n):
+            while k < (2**n): [this is run n times]
                 cur = i&k
                 k = k<<1
                 if cur != 0:
@@ -46,5 +46,5 @@ with bitmasking
 
 | param | without bitmaskig | with bitmasking |
 | ------|-------------------|------------------|
-| time complexity | n*2^n (to select or not select) | n*2^n 2 loops|
+| time complexity | n*2^n (to select or not select) | n*2^n, 2 loops|
 | space complexity | O(n) + output | 0(1) + output |
