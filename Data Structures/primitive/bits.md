@@ -57,6 +57,9 @@ Last set bit Removal in a
 Check if number is power of 2 [only one 1 in binary]
 1. a&(a-1) is 0
 
+  [ https://leetcode.com/problems/single-number-iii/](https://leetcode.com/problems/single-number/description/) see single number 2,3 as well
+   
+
 # IIMP
 https://leetcode.com/discuss/interview-question/3695233/all-types-of-patterns-for-bits-manipulations-and-how-to-use-it
 
