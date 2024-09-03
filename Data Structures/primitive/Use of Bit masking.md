@@ -48,3 +48,4 @@ with bitmasking
 | ------|-------------------|------------------|
 | time complexity | n*2^n (to select or not select) | n*2^n, 2 loops|
 | space complexity | O(n) + output | 0(1) + output |
+output space complexity is n*2^n
