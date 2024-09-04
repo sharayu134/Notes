@@ -1,6 +1,6 @@
 only see pq
 
-1. have a min distance array for each node
+1. have a min distance array for each node with infinity distance 
 2. slect 0 as starting node and distance 0
 3. now add this to the pq
 4. starrrt popping the pq while pq
