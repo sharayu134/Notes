@@ -12,3 +12,8 @@ https://medium.com/@timpark0807/leetcode-is-easy-the-interval-pattern-d68a7c1c84
 
 https://leetcode.com/problems/merge-intervals/description/
 
+
+# intutions
+
+# how to solve
+1. simply draw images of the intervals and try to merge
