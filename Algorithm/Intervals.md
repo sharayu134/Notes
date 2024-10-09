@@ -16,4 +16,4 @@ https://leetcode.com/problems/merge-intervals/description/
 # intutions
 
 # how to solve
-1. simply draw images of the intervals and try to merge
+1. simply draw images of the intervals and try to merge, visualise the interval input
