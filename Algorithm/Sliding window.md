@@ -46,9 +46,9 @@ class Solution:
         r = 0
         n = len(fruits)
         maxlen =0
-        map[fruits[r]] +=1
         
         while r<n:
+            map[fruits[r]] +=1
             while len(map) >2:
                 map[fruits[l]] -=1
                 if map[fruits[l]]==0:
@@ -56,9 +56,7 @@ class Solution:
                 l+=1
             maxlen = max(maxlen, r-l+1)
             r+=1
-            if r<n:
-                map[fruits[r]] +=1
-            
+                            
         return maxlen
 ```
 ## Find number of subarray with given condition
