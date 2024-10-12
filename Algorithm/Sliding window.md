@@ -38,6 +38,7 @@ K - window size
 3. else do l-=1
 4. update min/max/res as required
 5. https://leetcode.com/problems/fruit-into-baskets/
+6. **Here the position of  map[fruits[r]] +=1 is VVIMP**
 ```
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
@@ -63,6 +64,7 @@ class Solution:
 1. find number of subarrays(r-l+1) for condition which is less than or equal **K** use variable window method
 2. find number of subarrays(r-l+1) for condition which is less than or equal **k-1**
 3. return 2-1
+4. **Here the position of   map[nums[r]] +=1 is VVIMP**
 5. https://leetcode.com/problems/subarrays-with-k-different-integers/description/
 
 ```
