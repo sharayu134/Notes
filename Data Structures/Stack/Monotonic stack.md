@@ -28,7 +28,51 @@ https://www.geeksforgeeks.org/how-to-identify-and-solve-monotonic-stack-problems
 
 
 https://leetcode.com/discuss/study-guide/2347639/A-comprehensive-guide-and-template-for-monotonic-stack-based-problems
+### Forward
+```
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        stk = []
+        nge = {}
+        n = len(nums2)
 
+        for i in range(n):
+            while stk and nums2[stk[-1]] < nums2[i]:
+                top = stk.pop()
+                nge[nums2[top]] = nums2[i]
+            stk.append(i)
+
+        while stk:
+            top = stk.pop()
+            nge[nums2[top]] = -1
+
+        res = []
+        for ele in nums1:
+            res.append(nge[ele])
+        return res
+```
+### Reverse
+```
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        stk = []
+        nge = {}
+        n = len(nums2)
+
+        for i in range(n-1,-1,-1):
+            while stk and nums2[stk[-1]] < nums2[i]:
+                top = stk.pop()
+            if stk: 
+                nge[nums2[i]] = nums2[stk[-1]]
+            else:
+                nge[nums2[i]] = -1
+            stk.append(i)
+
+        res = []
+        for ele in nums1:
+            res.append(nge[ele])
+        return res
+```
 ### Intution
 1. next greater element, next smaller element, previous greater element and previous smaller element
 2. expression evaluation rec-> iteration
