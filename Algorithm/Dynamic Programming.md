@@ -15,7 +15,7 @@ https://www.naukri.com/code360/problems/matrix-chain-multiplication_975344?sourc
 
 
 ## Implementation
-1. Recursive soln (minimize the state variabls as min as possible)
+1. Recursive soln (**minimize the state variabls as much as possible**)
 2. convert to memo (one state variable is 1D-DP, two state variables is 2D-DP)
 3. memo to tablulation (start from end)
 4. **Base case is very important in dp, ask yourslef what is the smallest problem you want to solve** 
