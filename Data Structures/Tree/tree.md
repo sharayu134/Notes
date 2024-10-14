@@ -14,9 +14,9 @@ https://www.youtube.com/watch?v=IpyCqRmaKW4
 ```     void getOrder(TreeNode root){
         if(root==null)
             return;
-            // root printed/used here inorder 
+            // root printed/used here preorder 
         getOrder(root.left);
-            // root printed/used here preorder
+            // root printed/used here inorder
         getOrder(root.right);
             // root printed/used here postorder
     }
