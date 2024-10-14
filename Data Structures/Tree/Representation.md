@@ -5,7 +5,7 @@ for example using treenode instead of array will decrease the index calculation
 
 ## Array 
 ```
- p is parent
+ p is parent index
  left_child = (2*p)+1; 
  right_child = (2*p)+2;
  p  = (child - 1) // 2
