@@ -22,6 +22,8 @@ https://www.youtube.com/watch?v=IpyCqRmaKW4
     }
 ```
 
+ 
+**If it's tree it's gonna be recursion some travelsal pre/in/post order think in that direction**
 
 Since each node in the binary tree is visited exactly once, and the operations performed at each node take constant time, the overall time complexity of the function is:
 O(n)
