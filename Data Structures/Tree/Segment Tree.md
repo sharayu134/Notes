@@ -62,3 +62,4 @@ def sumRange(self, left: int, right: int) -> int:
 8. And the array fits inn ![image](https://github.com/sharayu134/Notes/assets/43854821/ca474d7f-9838-488e-be1e-0a0fb9854c98)
 8. **Time Complexity** is log(n) as each time we move the arr is halved
 9. https://www.youtube.com/watch?v=xztU7lmDLv8&ab_channel=StableSort
+10. https://www.youtube.com/watch?v=rwXVCELcrqU&ab_channel=takeUforward
