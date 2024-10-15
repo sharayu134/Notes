@@ -66,3 +66,5 @@ class Trie:
 
 
 # Trie Tree is used to speed up string match (faster than find or startwith in large query request).
+
+### In questions you think trie can be used or has some word search try to apply trie on list of words then do the given thing https://leetcode.com/problems/word-search-ii/description/
