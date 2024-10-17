@@ -34,4 +34,58 @@ https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1?utm
 
 video on topic
 https://www.youtube.com/watch?v=zQ3zgFypzX4&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=13
-  
+
+# using BFS
+```
+from typing import List
+class Solution:
+    #Function to detect cycle in an undirected graph.
+	def isCycle(self, V: int, adj: List[List[int]]) -> bool:
+	    vis = set()
+	    
+	    def dfs(cur, src):
+	        if cur in vis:
+	            return True
+            vis.add(cur)
+            for nei in adj[cur]:
+                if nei!=src:
+                    if dfs(nei,cur):
+                        return True
+            return False
+	       
+	        
+		for k in range(V):
+		    if k not in vis:
+		        if dfs(k,-1):
+		            return True
+		
+		return False
+
+
+#{ 
+ from typing import List
+class Solution:
+    #Function to detect cycle in an undirected graph.
+    def isCycle(self, V: int, adj: List[List[int]]) -> bool:
+        vis = set()
+        def bfs(s):
+            nonlocal vis
+            q = [(s,-1)]
+            
+            while q:
+                cur, src = q.pop(0)
+                if cur in vis:
+                    return True
+                vis.add(cur)
+                for nei in adj[cur]:
+                    if nei != src:
+                        q.append([nei, cur])
+        for k in range(V):
+            if k not in vis:
+                if bfs(k):
+                    return True
+        
+        return False
+
+```
+https://www.youtube.com/watch?v=BPlrALf1LDU&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=11&ab_channel=takeUforward  
