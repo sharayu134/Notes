@@ -7,6 +7,7 @@
 2. two pointers
 3. DP
 4. sort
+5. trie
 
 # prefix sum
 1. In prefix sum you will need to perform the task on subsets of array(continuous)
