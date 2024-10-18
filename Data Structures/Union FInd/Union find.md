@@ -62,6 +62,23 @@ if ranks are same we can add at any positions
                 par[x] = find(par[x])
             return par[x] 
 
-    ```
+```
 
 still not getting it its okay go here https://www.youtube.com/watch?v=aBxjDBC4M1U&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=47&ab_channel=takeUforward
+
+## Time complexities
+
+1. Disjoint-set forests with path compression and union by rank:
+    Union: O(α(N)) (inverse Ackermann function)
+    Find: O(α(N))
+2. Disjoint-set forests with path compression only:
+    Union: O(log N)
+    Find: O(log N)
+3. Simple disjoint-set forests (without path compression or union by rank):
+    Union: O(N)
+    Find: O(N)
+Explanation:
+
+α(N) is a very slowly growing function that is essentially constant for all practical values of N. Therefore, disjoint-set forests with path compression and union by rank are considered to have almost constant time operations.
+Path compression is a technique that flattens the tree structure during the Find operation, making subsequent Find operations faster.
+Union by rank is a heuristic that merges smaller sets into larger sets to reduce the height of the trees, improving the performance of both Union and Find operations.
