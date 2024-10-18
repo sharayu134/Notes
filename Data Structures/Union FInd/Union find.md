@@ -25,6 +25,7 @@ There is parent array of each element the parent of itself will be it
 1. return parent if current parent's parent is itself
 2. otherwise do the find again
 3. save the result as parent of itself for path compression
+4. Here also the parent is important , you need to call the next find on **parent**
    
 ## path compression makes things more easier ->
 make every element point to the alpha parent node make this change while inomelenting the find ,
