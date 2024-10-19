@@ -12,13 +12,13 @@
 for first chracter as len of suf/pref cannot be same as string so it's 0
 1. lps_prev = 0, i=1
 2. if they match, increment everything
-3. if they don't then set  prev_lps = lps[prev_lps-1]
+3. if they don't then set prev_lps to prev prev_lps = lps[prev_lps-1]
 4. if prev_lps = 0, set lps[i] to zero as well move on
 
 ## Serching 
 
 1. If they match, increment all
-2. if they don't decreament lps/j  j = lps[j-1]
+2. if they don't, set lps/j to prev j = lps[j-1]
 3. if j ==0, increment i+1
 
 ```
