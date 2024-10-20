@@ -12,6 +12,7 @@ if not switch to another Data Structure
 5. Come up with test cases
 6. **Dry run differen test cases with all the scenario edge cases**
 
+2.  **If you are stuck slove it bu brute force**
 
 
 https://www.notion.so/Topics-to-Study-7e7bae203ec54bc2965f1b9a4e3dfa2f
