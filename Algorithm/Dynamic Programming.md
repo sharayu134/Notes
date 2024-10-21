@@ -24,3 +24,4 @@ https://www.naukri.com/code360/problems/matrix-chain-multiplication_975344?sourc
 ## 2D matrix
 1. create the matrix with 2 dimentions and start filling them up
 2. 2 dimentions are all possible values of 2 state variables in recursion
+3. break the problem into small parts in terms of i and j then do and represent it on the matrix
