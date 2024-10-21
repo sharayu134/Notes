@@ -17,3 +17,9 @@ https://leetcode.com/problems/merge-intervals/description/
 
 # how to solve
 1. simply draw images of the intervals and try to merge, visualise the interval input
+
+
+import bisect
+arr = [[1, 2], [3, 4]]
+index = bisect.bisect_left(arr, [0, 0], key=lambda x: x[0])
+print(index)  # Output: 0
