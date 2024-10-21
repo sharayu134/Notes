@@ -10,25 +10,22 @@ only see pq
 8. keep doing this while pq is not empty 
 
 ```
-from typing import List
-class Solution:
 
-    def dijkstra(self, V: int, adj: List[List[int]], S: int) -> List[int]:
-        dist = [float('inf')]*V
-        dist[S] = 0
-        pq = [(S,0)]
+    def dijkstra(self, adj: List[List[Tuple[int, int]]], src: int) -> List[int]:
+        dis = [float('inf')] * len(adj)
+        dis[src] = 0
+        pq = [(0, src)]
         
         while pq:
-            node, cur_dis = pq.pop(0)
+            dist, cur = heapq.heappop(pq)
+            for nei, d in adj[cur]:
+                new_dis = dist+d
+                if new_dis < dis[nei]:
+                    heapq.heappush(pq, (new_dis, nei))
+                    dis[nei] = new_dis
 
-            for nei in adj[node]:
-                n_node = nei[0]
-                next_dis = cur_dis+nei[1]
-                if dist[n_node] > next_dis:
-                    dist[n_node] = next_dis
-                    pq.append((n_node, next_dis))
-                    
-        return dist
+        return dis
+
 ```
 https://www.youtube.com/watch?v=3dINsjyfooY&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=35&ab_channel=takeUforward
 
