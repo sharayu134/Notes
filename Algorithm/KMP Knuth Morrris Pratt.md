@@ -6,6 +6,7 @@
 4. in LPS save the current longest prefix suffix
 5. https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
 6. https://www.youtube.com/watch?v=JoF0Z7nVSrA&ab_channel=NeetCode
+7. https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
 
 ## creating LPS array
 
