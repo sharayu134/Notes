@@ -8,3 +8,5 @@
 8. zero dependency
 9. No external dependencies or libaries or frameworks are required, so easy deployment fast deployment
 10. built in support for tests
+
+Caital is public
