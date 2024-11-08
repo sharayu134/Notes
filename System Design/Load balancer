@@ -1,0 +1,9 @@
+strategies for doing the load balalncing
+1. Round robin
+2. Least connections
+3. Consistent hashing
+
+Few solutions
+nginx
+HAproxy
+AWS elastic load balancer
