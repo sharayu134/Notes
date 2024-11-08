@@ -7,3 +7,12 @@ Few solutions
 nginx
 HAproxy
 AWS elastic load balancer
+
+advantages
+1. scaling beocomes easy as we can add pr remove the server
+2. reliability - can find unhealthy server and replace them 
+3. Performance - by distributing load evenly load balancer can provide reduced response time
+
+disadvantages
+1. there should be multiple load balancers to avoid single point of failure
+2 deployment will take longer as it will need to redirect to new servers
