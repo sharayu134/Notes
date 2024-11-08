@@ -27,3 +27,13 @@ Service Discovery - API gate will route to microservice but which pod/IP
 <img width="942" alt="image" src="https://github.com/user-attachments/assets/183f453e-a343-4184-85d7-d3db423b28d4">
 
 
+<img width="967" alt="image" src="https://github.com/user-attachments/assets/0de7f6fb-b3b0-4054-9f6b-40b463452b84">
+
+
+<img width="505" alt="image" src="https://github.com/user-attachments/assets/dedcbd8d-cda2-4dc5-839f-2988e9e39cd6">
+
+<img width="967" alt="image" src="https://github.com/user-attachments/assets/f669a8d3-8d98-4edc-a5e0-e8b996430ee4">
+
+<img width="967" alt="image" src="https://github.com/user-attachments/assets/54c71d93-2af1-4ab2-b834-9084f78a396a">
+
+
