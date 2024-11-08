@@ -6,7 +6,7 @@ If one component fails all the service fails | it soesn't make a bigger impact u
 If we make i payment it will affect hugly, even we have to deploy the whole service | If we make changes in the payments it can easily independenty tested and deploy |
 Highly dependent / tightly coupled | independent / loosly coupled |
 Same tech, frame work, language for whole service | can be differernt |
-scalling is difficult | scalable
+scalling is difficult | scalable, also each component is individualy scalable
 Easily get the relations between Foreign keys of table | As tables are in totaly different schhema no way to retain this relation e.g payment and user table |
 Not a distributed system | Distributed System |
 . | Autonomous, one task  |
