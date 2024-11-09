@@ -7,3 +7,4 @@
     * Specic error like 500
     * more specific like exception same error
     * If any type reaches the threshold then fire an alert
+datadog uses queues to process the logs
