@@ -14,6 +14,7 @@ Notif related - push/sms/email
 - history logs/ error logs
 - ofc cache data in notif service
 - dead letter queue
+- datadog uses queue
 why QUEUE
 Message queues: They remove dependencies between components. Message queues serve as
 buffers when high volumes of notifications are to be sent out. Each notification type is
