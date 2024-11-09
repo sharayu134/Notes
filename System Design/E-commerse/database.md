@@ -1,5 +1,5 @@
--For searching search frienldy database like elastic search should be used
--there could be fuzzy factor ie edit distance
--also search dbs are based on invetred index
--whenever we add/upadate a record it will be indexed for a word to document containing the word or similar word
+- For searching search frienldy database like elastic search should be used
+- there could be fuzzy factor ie edit distance
+- also search dbs are based on invetred index
+- whenever we add/upadate a record it will be indexed for a word to document containing the word or similar word
 - as each write/update will occupy the CPU for updating the index, preference to read to be given as the user is very much engaged with search and write/update could be eventually consistent
