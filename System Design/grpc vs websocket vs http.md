@@ -1,4 +1,15 @@
 Web socket 
+
+1. TCP
+2. creates conenctions completes handshake
+3. then starts data sharing
+4. websocket handler to handle the request
+5. connection stays open until one of the party drops off
+6. full duplx - both parties can send messages
+7. stock price fluctuation/chat application/gaming application [leaderboard update]
+8. real time web apps
+
+   
 Choosing between gRPC and HTTP/REST for your service architecture largely depends on your specific use case, performance requirements, team expertise, and the overall system design. Below is a comparison of when to use gRPC versus traditional HTTP/REST:
 
 ### When to Use gRPC:
