@@ -130,3 +130,38 @@ A **join table** (or junction table, associative table, linking table) is used t
 - **Use Join Tables**: When dealing with many-to-many relationships or when additional attributes about the relationship itself need to be captured.
 
 In summary, the decision between using a join table versus foreign keys depends primarily on the complexity of the relationships you're trying to model within your database schema.
+
+
+For financial applications, where precision is essential to avoid rounding errors in calculations, the recommended data type in Google Cloud Spanner is **`NUMERIC`**.
+
+### Why Use `NUMERIC`?
+
+1. **Precision**:
+   - The `NUMERIC` data type supports up to 38 digits of precision with 9 digits after the decimal point. This makes it ideal for representing monetary values, as it allows for exact representation of amounts without rounding errors that can occur with floating-point representations.
+
+2. **Fixed Decimal Point**:
+   - Because `NUMERIC` has a scale and precision, it maintains a consistent format, which is crucial for financial data (e.g., prices, salaries, and interest rates).
+
+3. **Avoids Rounding Issues**:
+   - `FLOAT64` (which represents approximate numeric values) can lead to inaccuracies in financial calculations. Using `FLOAT64` can result in rounding errors that are unacceptable in financial contexts.
+
+### Example of Using `NUMERIC` in a Table
+
+Here’s an example of how to define a Spanner table that includes monetary values:
+
+```sql
+CREATE TABLE Transactions (
+    TransactionID INT64 NOT NULL,
+    Amount NUMERIC,               -- Store the monetary amount here
+    CurrencyCode STRING(3),       -- For example, 'USD', 'EUR'
+    TransactionDate TIMESTAMP,
+    PRIMARY KEY (TransactionID)
+);
+```
+
+### Summary
+
+- Use **`NUMERIC`** for all monetary values in financial applications to ensure precision and reduce the risk of rounding errors. This will help maintain the integrity of your financial data and calculations.
+
+By following this approach, you can effectively manage financial data in Google Cloud Spanner while ensuring accuracy and reliability.
+
