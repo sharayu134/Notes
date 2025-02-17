@@ -24,4 +24,8 @@ this is in summarisation is large building
 * Transformers convert input matrix to output matrix and convert that output to words
 * multi head atention algorithm
 
-* as being seen what goes in comes out, the input feed needs to be valid carrect 
+* as being seen what goes in comes out, the input feed needs to be valid carrect
+
+* testing
+* peerplexity model is used for testing
+* also some human tests with separate testing data and gives score like -+ and model reinforces that feedback 
