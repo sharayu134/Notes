@@ -97,3 +97,50 @@ docker run -p 6333:6333 -p 6334:6334 \
     -v $(pwd)/qdrant_storage:/qdrant/storage:z \
     qdrant/qdrant
 ```
+### **🔢 What is the "score" in the Vector Database Result?**  
+
+The **"score"** in your Qdrant vector search result represents the **similarity or relevance** between the **query vector** and the stored vectors.  
+
+---
+
+### **🔍 Understanding the Score**
+- **Higher score** → **More similar** to the query  
+- **Lower score** → **Less similar** to the query  
+
+The meaning of the score depends on the **distance metric** used in the vector search.  
+
+---
+
+### **📏 Common Distance Metrics & Their Scores**
+| Distance Metric        | Score Meaning |
+|------------------------|--------------|
+| **Cosine Similarity**  | **Higher = Better match** (Ranges from -1 to 1) |
+| **Dot Product**        | **Higher = Better match** (No fixed range) |
+| **Euclidean Distance** | **Lower = Better match** (Ranges from 0 to ∞) |
+
+#### **Example: Cosine Similarity**
+\[
+\text{similarity} = \frac{A \cdot B}{||A|| \times ||B||}
+\]
+- If **score = 1** → Perfect match  
+- If **score = 0.03** (like "Neptune") → Weak match  
+
+---
+
+### **🚀 Interpreting Your Data**
+Based on your JSON:
+```json
+"score": 0.031177998,  // Neptune
+"score": 0.022683999,  // Mars
+"score": 0.0123890005, // Venus
+"score": 0.008311      // Jupiter
+```
+- **Neptune (0.0311)** is the closest match to the query.  
+- **Jupiter (0.0083)** is the least similar match.  
+
+---
+
+### **🛠 How to Improve Results?**
+- **Use a different similarity metric** (e.g., switch from Cosine to Dot Product).  
+- **Increase embedding quality** (try a better embedding model).  
+- **Adjust query vector** (modify weights to emphasize certain features).  
