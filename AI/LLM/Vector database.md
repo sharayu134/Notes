@@ -137,7 +137,67 @@ Based on your JSON:
 ```
 - **Neptune (0.0311)** is the closest match to the query.  
 - **Jupiter (0.0083)** is the least similar match.  
+### **🔢 How to Compute the Dot Product of Two Vectors?**  
 
+The **dot product** (also called the **inner product**) of two vectors measures their similarity and is calculated as:
+
+\[
+A \cdot B = A_1B_1 + A_2B_2 + A_3B_3 + \dots + A_nB_n
+\]
+
+Where:  
+- **\(A\)** and **\(B\)** are two vectors  
+- **\(A_i\)** and **\(B_i\)** are the corresponding elements of each vector  
+
+---
+
+### **🛠 Methods to Compute Dot Product**
+#### **1️⃣ Python (NumPy)**
+```python
+import numpy as np
+
+A = np.array([1, 2, 3])
+B = np.array([4, 5, 6])
+
+dot_product = np.dot(A, B)  # (1*4) + (2*5) + (3*6) = 32
+print(dot_product)  # Output: 32
+```
+
+#### **2️⃣ Python (Without NumPy)**
+```python
+A = [1, 2, 3]
+B = [4, 5, 6]
+
+dot_product = sum(a * b for a, b in zip(A, B))
+print(dot_product)  # Output: 32
+```
+
+#### **3️⃣ Using Matrix Multiplication (NumPy)**
+```python
+dot_product = A @ B  # Also works in NumPy
+print(dot_product)  # Output: 32
+```
+
+---
+
+### **🔍 Example Calculation**
+If we have:
+\[
+A = [1, 2, 3], \quad B = [4, 5, 6]
+\]
+The dot product is:
+\[
+(1 \times 4) + (2 \times 5) + (3 \times 6) = 4 + 10 + 18 = 32
+\]
+
+---
+
+### **📌 Applications of Dot Product**
+- **Vector similarity** in **vector databases** (e.g., Qdrant, Pinecone, FAISS)  
+- **Machine learning** (e.g., embeddings, recommendation systems)  
+- **Physics & engineering** (e.g., projections, work done by force)  
+
+Would you like help using this in a vector search query? 🚀
 ---
 
 ### **🛠 How to Improve Results?**
