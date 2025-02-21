@@ -90,4 +90,10 @@ If you have text embeddings stored, you can perform a search like this:
 ✅ **Fast & Scalable** – Optimized for large datasets with millions of vectors  
 ✅ **Improves recommendations** – Used in search engines, chatbots, and personalization  
 
-Would you like help setting up a vector search in Qdrant? 😊
+To see the detailed query run 
+```
+docker pull qdrant/qdrant
+docker run -p 6333:6333 -p 6334:6334 \
+    -v $(pwd)/qdrant_storage:/qdrant/storage:z \
+    qdrant/qdrant
+```
