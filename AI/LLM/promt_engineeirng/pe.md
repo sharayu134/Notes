@@ -167,3 +167,9 @@ response = get_completion(prompt)
 print(response)
 
 <img width="756" alt="image" src="https://github.com/user-attachments/assets/d4646f27-5d4b-4270-b8b1-e367138ea003" />
+
+# iterative prompt development
+
+<img width="886" alt="image" src="https://github.com/user-attachments/assets/39d2b09a-22ae-4a3b-81a6-eec72ebde59d" />
+
+<img width="886" alt="image" src="https://github.com/user-attachments/assets/f02d7efe-56fb-4178-821d-f4d6ffae14ea" />
