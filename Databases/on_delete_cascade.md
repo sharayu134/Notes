@@ -1,4 +1,4 @@
-````
+```
 CREATE TABLE IF NOT EXISTS public.saves
 (
     save_id integer NOT NULL DEFAULT nextval('saves_save_id_seq'::regclass),
@@ -35,6 +35,8 @@ CREATE SEQUENCE IF NOT EXISTS saves_save_id_seq
 
 ALTER SEQUENCE IF EXISTS saves_save_id_seq OWNER TO postgres;
 ```
+
+
 #  if I delete user, video what will happen to this saves row? If I delete this row in saves what will happen to user and video
 
 
