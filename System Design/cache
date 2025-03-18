@@ -1,0 +1,172 @@
+Caching
+
+
+
+
+
+
+
+
+Definition
+the process of storing copies of data in a temporary location, or cache, to make it faster to access
+
+
+
+
+Types
+..... Many more 
+Networking layers including Content Delivery Networks (CDN) and DNS
+Recommendation engines and high-performance computing simulations (billions of rows)
+
+
+Mechanism -
+Cache-Aside
+
+
+The data in a cache is generally stored in fast access hardware such as RAM 
+
+Internal working
+Saved in RAM
+
+
+
+
+Cache hit
+Cache miss
+TTL
+How Expiration Works
+Passive Expiration:
+When a key is accessed, Redis checks if the key has expired. If it has, the key is deleted immediately and will be considered non-existent for that operation.
+Active Expiration:
+ includes a mechanism that regularly samples a random set of keys with expiration times and removes those that have expired.
+This is a background task that runs 10 times per second (by default), examining a subset of keys, checking their expirations, and removing them if expired.
+
+
+Write back cache 
+Cache stampede
+Cache Eviction Policies: (Deciding which cache items to remove)
+LRU
+LFU
+FIFO.
+Cache avalanche: If cache memory fails at the same time that a user requests a large query, the database will be put under a tremendous amount of stress, perhaps causing the database to crash. This challenge can be overcome by using cache cluster and hystrix.
+
+
+Read Through
+
+
+
+
+
+
+
+Write through 
+
+
+
+
+
+
+
+Write back
+
+
+
+
+
+Write around 
+
+
+In - memory Cache 
+https://github.com/kouzoh/merpay-coupon-jp/tree/master/src/merpaycoupon/infra/cache
+
+
+Redis
+In memory - Database (RAM)
+Key - value store
+Ttl
+Additionally, Redis offers advanced features like pub/sub messaging, which can be leveraged to implement cache invalidation mechanisms.
+Can monitor the performance
+Can save kay-value pair, value in bytes array
+Pool of connections is available as built in solution
+Built in support for pub/sub messaging
+We can get source change notifications with this can be useful
+Data Structures:
+Redis supports a wide variety of complex data structures including lists, sets, hashes, sorted sets, and more, which can offer more flexibility with how you store and manipulate your data.
+If your gRPC response is complex and might benefit from being stored in a structured format, Redis provides more options.
+Persistence:
+Redis offers optional data persistence, allowing you to store data on disk. This can be crucial if you need to back up your cached responses or recover from failures without data loss.
+Advanced Features:
+Redis includes support for Lua scripting, transactions, which might be advantageous if you plan to implement more sophisticated caching logic.
+Supports TTL (time-to-live) and can automatically expire keys which are useful for cache invalidation strategies.
+Scalability:
+Redis has strong support for scaling with Redis Cluster and Sentinel, making it well-suited for distributed and high-availability environments.
+
+
+
+
+Memcached 
+Can directly save object as it is
+TTL
+No built in support for pub/sub messaging
+Simplicity:
+Memcached is designed to be simple and has a straightforward API. It is often faster for simple key-value storage and retrieval.
+If your primary need is to store serialized blobs of data (like JSON), Memcached can be very efficient.
+Memory Efficiency:
+Memcached is optimized for ephemeral data storage and is often more memory-efficient, especially if you keep the data in simple key-value pairs and fetch regularly.
+Use Cases:
+Designed for simple caching tasks, where you don't need to utilize advanced data structures or logic.
+Typically used where high-throughput, low-latency data caching is required, without additional complexity.
+
+
+Redis 
+Hashmap, sets, geo indexes
+Fixed partition (gossip protocol)
+Write ahead log, allows transaction, single threaded
+Single leader replication
+
+
+generally recommended. Even if you don't need its advanced features now, it provides more flexibility for future growth.
+If the campaign service data becomes more complex, Redis's data structures will be invaluable.
+Redis is very performant, and is very widely used.  
+Retry logic in fallback
+: In cronjob
+Redis is persistent, memcached not
+Stampede Protection: You could add a small lock mechanism in the cache for the process of fetching data. If the data is being refreshed by one instance of the application, other instances will wait until the refresh is complete before accessing the cache
+
+
+Distributed Locking with Redis: To avoid cache stampedes, consider using distributed locks with Redis (using Redlock, for example). When one service is updating the cache, other services will wait to avoid hitting the internal endpoint simultaneously. This ensures that only one instance is fetching and refreshing the data while others wait.
+
+
+Pros
+Speed
+
+Can deliver faster response to target user
+Efficiency
+
+Reduces number  of read write operations, reduces load on system 
+Cost 
+
+The scaling cost and DB read/cost is reduced
+Better User Experience
+
+Allows faster access to data on site
+Eliminate DB Hotspot
+
+A celebrity set of data being used very frequently can be stored
+
+
+
+
+
+
+
+Challenges Coherence Problem
+Since whenever data is cached, a copy is created, there are now two copies of the same data. This means that they can diverge over time. In a few words, this is the coherence problem, which represents the most important and complex issue related to caching. There is not a particular solution that is preferred over another, and the best approach depends on the requirements. Identifying the best cache update or invalidation mechanism is one of the biggest challenges related to caching and perhaps one of the hardest challenges in computer science.
+
+
+Challenges with distributed system
+In a distributed computing environment, a dedicated caching layer enables systems and applications to run independently from the cache with their own lifecycles without the risk of affecting the cache. The cache serves as a central layer that can be accessed from disparate systems with its own lifecycle and architectural topology. This is especially relevant in a system where application nodes can be dynamically scaled in and out. If the cache is resident on the same node as the application or systems utilizing it, scaling may affect the integrity of the cache. In addition, when local caches are used, they only benefit the local application consuming the data. In a distributed caching environment, the data can span multiple cache servers and be stored in a central location for the benefit of all the consumers of that data
+
+
+
+
