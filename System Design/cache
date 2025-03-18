@@ -168,5 +168,23 @@ Challenges with distributed system
 In a distributed computing environment, a dedicated caching layer enables systems and applications to run independently from the cache with their own lifecycles without the risk of affecting the cache. The cache serves as a central layer that can be accessed from disparate systems with its own lifecycle and architectural topology. This is especially relevant in a system where application nodes can be dynamically scaled in and out. If the cache is resident on the same node as the application or systems utilizing it, scaling may affect the integrity of the cache. In addition, when local caches are used, they only benefit the local application consuming the data. In a distributed caching environment, the data can span multiple cache servers and be stored in a central location for the benefit of all the consumers of that data
 
 
-
+[8:34 am, 12/3/2025] Sharayu: Both stored as non relational
+[8:43 am, 12/3/2025] Sharayu: Memcached 
+Bare bones in memory storage 
+Partitioning (consistent hashing)
+Multithreading
+LRU eviction (doubly link list)
+[9:29 am, 12/3/2025] Sharayu: Redis 
+Hashmap, sets, geo indexes
+Fixed partition (gossip protocol)
+Write ahead log, allows transaction, single threaded
+Single leader replication
+[9:52 am, 12/3/2025] Sharayu: generally recommended. Even if you don't need its advanced features now, it provides more flexibility for future growth.
+If the campaign service data becomes more complex, Redis's data structures will be invaluable.
+Redis is very performant, and is very widely used.  
+[9:55 am, 12/3/2025] Sharayu: Retry logic in fallback
+[9:56 am, 12/3/2025] Sharayu: In cronjob
+[9:56 am, 12/3/2025] Sharayu: Redis is persistent, memcached not
+[10:02 am, 12/3/2025] Sharayu: Stampede Protection: You could add a small lock mechanism in the cache for the process of fetching data. If the data is being refreshed by one instance of the application, other instances will wait until the refresh is complete before accessing the cache
+[10:02 am, 12/3/2025] Sharayu: Distributed Locking with Redis: To avoid cache stampedes, consider using distributed locks with Redis (using Redlock, for example). When one service is updating the cache, other services will wait to avoid hitting the internal endpoint simultaneously. This ensures that only one instance is fetching and refreshing the data while others wait.
 
