@@ -127,3 +127,50 @@ After `fit_resample`:
 **In short:**  
 `fit_resample` balances your dataset by duplicating minority class samples, so your model can learn from all classes equally.
 
+Let's break down the line:
+
+```python
+data = np.hstack((x, np.reshape(y, (-1,1))))
+```
+
+### What does it do?
+
+- **`x`**: A 2D NumPy array of features, shape `(n_samples, n_features)`.
+- **`y`**: A 1D NumPy array of labels/target, shape `(n_samples,)`.
+
+#### Step-by-step:
+1. **`np.reshape(y, (-1,1))`**  
+   - Converts `y` from shape `(n_samples,)` to shape `(n_samples, 1)`.  
+   - This makes `y` a column vector, so it can be concatenated with `x`.
+
+2. **`np.hstack((x, ...))`**  
+   - Horizontally stacks (concatenates) the feature matrix `x` and the reshaped label column.
+   - The result is a new array where the last column is the target/label.
+
+### What is the output?
+
+- **Shape:** `(n_samples, n_features + 1)`
+- **Content:** All the original features, plus the label as the last column.
+
+#### Example
+
+Suppose:
+```python
+x = np.array([[1, 2], [3, 4], [5, 6]])  # shape (3, 2)
+y = np.array([10, 20, 30])              # shape (3,)
+```
+
+After the operation:
+```python
+data = np.hstack((x, np.reshape(y, (-1,1))))
+# data is:
+# array([[ 1,  2, 10],
+#        [ 3,  4, 20],
+#        [ 5,  6, 30]])
+```
+
+### **Summary**
+- This line **combines your features and labels into a single array**, with the label as the last column.
+- Useful for saving or exporting the full dataset together.
+
+Let me know if you want a visual or have more questions!
