@@ -1,3 +1,4 @@
+```
 def scale(dataf, over_sampling=False):
   x = dataf[dataf.columns[:-1]].values
   y = dataf[dataf.columns[-1]].values
@@ -11,6 +12,8 @@ def scale(dataf, over_sampling=False):
 
   data = np.hstack((x, np.reshape(y, (-1,1))))
   return data,x,
+```
+
 ---
 
 ### `fit_transform` in `StandardScaler`
