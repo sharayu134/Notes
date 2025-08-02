@@ -19,3 +19,4 @@ It's going to be blue <img width="495" height="331" alt="image" src="https://git
 <img width="812" height="434" alt="image" src="https://github.com/user-attachments/assets/55d3bf44-4089-4e42-bb86-324dca675e31" />
 It's going to be red \<img width="812" height="434" alt="image" src="https://github.com/user-attachments/assets/2b978d70-2ccf-4bc6-a8bf-902c0a442392" />
 <img width="947" height="767" alt="image" src="https://github.com/user-attachments/assets/06ea92ae-4ac4-4b13-88c7-487f35cbd819" />
+# you can always adjust the number of ks to adjust result
