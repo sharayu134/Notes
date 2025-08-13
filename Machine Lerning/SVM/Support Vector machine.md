@@ -1,4 +1,4 @@
-# SVM - Classification 
+# SVM - Supervised Classification 
 
 
 In given data set you try to draw line dividing the dataset 
