@@ -35,3 +35,6 @@ we cannot draw two lines this is invalid these are tobe single line
 But we can project these to new values like x=x, y=x^2, to draw a line
 <img width="816" height="399" alt="image" src="https://github.com/user-attachments/assets/7ea2747f-4f39-451c-a323-8d790f913dc8" />
 This transformation is known as kernel trick 
+
+<img width="501" height="296" alt="image" src="https://github.com/user-attachments/assets/5cffe6bf-4973-4eb0-9a18-4986bfaf71c6" />
+This given better accuracy in case of magic dataset
