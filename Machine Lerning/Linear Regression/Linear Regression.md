@@ -43,3 +43,30 @@ We try to find line of best fit for the data,
   - <img width="332" height="221" alt="image" src="https://github.com/user-attachments/assets/733527e5-cc5c-48d1-92b2-7eeb1860ac70" />
   - Incorrect <img width="332" height="394" alt="image" src="https://github.com/user-attachments/assets/5caaf523-8d61-4b6f-ae76-efa4dab2984e" />
   - When we plot residuals on the graph then the data should be evenly distributed
+ 
+
+
+
+# Evaluation of Linear Regression model
+
+- Mean Absolute Error (MAE)
+  - Mean of absolute differences between actual and predicted values
+  - This helps us to comapre how much we are off by with respect to original y
+  - <img width="720" height="394" alt="image" src="https://github.com/user-attachments/assets/6c7f95ee-8770-49dc-b598-56633a88f044" />
+
+- Mean Squared Error (MSE)
+  - Mean of square of differences between actual and predicted values
+  - Square helps us panish large differences and differentiation as it's quadratic
+  - <img width="720" height="394" alt="image" src="https://github.com/user-attachments/assets/c9d85b71-f366-43fa-ac15-dd3ccaebde67" />
+  - this becomes --> This helps us to comapre how much we are off by with respect to original y difficult so we take square root
+ 
+- Root Mean Squared Error (RMSE)
+  - underroot of MSE
+  - Now we can This helps us to comapre how much we are off by with respect to original y difficult so we take square root
+  - <img width="720" height="394" alt="image" src="https://github.com/user-attachments/assets/e2a45ea3-572b-4ecc-8535-6f361ef9de32" />
+
+ - R^2  Coefficient of Determination
+   - In Tss y- is mean
+   - <img width="787" height="394" alt="image" src="https://github.com/user-attachments/assets/8b974c57-79f0-4441-93ad-ac4d61645d95" />
+
+
