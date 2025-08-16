@@ -47,7 +47,7 @@ We try to find line of best fit for the data,
 
 
 
-# Evaluation of Linear Regression model
+# Evaluation of Linear Regression model (Loss/Error function)
 
 - Mean Absolute Error (MAE)
   - Mean of absolute differences between actual and predicted values
