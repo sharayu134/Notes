@@ -74,6 +74,34 @@ In interviews, **real-world, intuitive examples** work best. A safe and strong o
 
 > “Supervised learning is important in ML system design because most practical ML systems—like recommendation engines, fraud detection, and search ranking—are based on supervised learning with large amounts of labeled data.”
 
+Absolutely! Let’s craft an **interview-ready breakdown** for **unsupervised learning**, just like we did for supervised.
+
+---
+
+##  "What is Unsupervised Learning?"
+
+**Definition (Concise):**
+Unsupervised learning is a type of machine learning where the model is trained on **unlabeled data**. The system tries to find hidden patterns, structures, or groupings in the data without predefined outputs.
+
+
+1. **Customer Segmentation**
+
+   * Input: Purchase history, browsing behavior, demographics of customers.
+   * Output: No labels, but the algorithm clusters customers into groups (e.g., high-value vs. casual shoppers).
+   * Companies then use these groups for targeted marketing.
+
+2. **Market Basket Analysis (Association Rules)**
+
+   * Input: Shopping carts with lists of items bought together.
+   * Output: Discovered patterns like “People who buy bread and butter also often buy jam.”
+   * Used for recommendation systems and store layout optimization.
+
+---
+
+✅ **Interview Tip:** After the example, you can add:
+
+> “Unsupervised learning is critical in ML system design because it helps when labeled data is scarce. It’s often the first step for understanding data structure, reducing dimensionality, or creating features that later feed into supervised systems.”
+
 
 # Classification - Supervised
 
