@@ -31,6 +31,49 @@
 <img width="913" height="357" alt="image" src="https://github.com/user-attachments/assets/a5c2fbcc-2f52-4fb7-a231-d0e9abde774d" />
 
 <img width="913" height="357" alt="image" src="https://github.com/user-attachments/assets/803e4539-803b-4012-a836-6bd7bc84ee78" />
+# Supervised Learning 
+Great question! Let’s break this down so you can give a **clear, interview-ready answer**.
+
+---
+
+## How to Answer "What is Supervised Learning?"
+
+**Definition (Concise):**
+Supervised learning is a type of machine learning where the model is trained on labeled data — meaning the input comes with the correct output. The algorithm learns a mapping from inputs (features) to outputs (labels) so it can predict unseen data.
+
+---
+
+## Example You Should Give
+
+In interviews, **real-world, intuitive examples** work best. A safe and strong one is:
+
+* **Spam Email Classification**
+
+  * Input: Features of an email (subject line, sender, text content, links).
+  * Output: Label (`spam` or `not spam`).
+  * The model learns from a dataset of emails that are already labeled as spam/not spam, and applies that knowledge to classify new emails.
+
+
+* **House Price Prediction**
+
+  * Input: Features of a house (square footage, location, number of rooms).
+  * Output: Label (numeric value = price).
+  * The model learns the relationship between features and price, then predicts price for new houses.
+
+---
+
+## Why These Examples Work in Interviews
+
+* **Spam classification** shows a **classification** problem.
+* **House price prediction** shows a **regression** problem.
+* Together, they demonstrate that you understand supervised learning covers both **classification and regression** tasks.
+
+---
+
+✅ **Interview Tip:** After giving the example, briefly add:
+
+> “Supervised learning is important in ML system design because most practical ML systems—like recommendation engines, fraud detection, and search ranking—are based on supervised learning with large amounts of labeled data.”
+
 
 # Classification - Supervised
 
