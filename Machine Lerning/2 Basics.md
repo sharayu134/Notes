@@ -103,6 +103,71 @@ Unsupervised learning is a type of machine learning where the model is trained o
 > “Unsupervised learning is critical in ML system design because it helps when labeled data is scarce. It’s often the first step for understanding data structure, reducing dimensionality, or creating features that later feed into supervised systems.”
 
 
+## How to Answer "What is Reinforcement Learning?"
+
+**Definition (Concise):**
+Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment. Instead of being given correct answers, it receives feedback in the form of **rewards or penalties** and aims to maximize cumulative reward over time.
+
+---
+
+## Key Components to Mention (Interview-Friendly)
+
+* **Agent** – the learner/decision maker.
+* **Environment** – where the agent acts.
+* **Actions** – choices the agent can take.
+* **State** – the current situation of the environment.
+* **Reward** – feedback signal for good/bad actions.
+
+---
+
+## Example You Should Give
+
+
+1. **Self-driving Car**
+
+   * Agent: the car.
+   * Environment: the road.
+   * Actions: accelerate, brake, turn.
+   * Reward: staying safe, following traffic rules, reaching destination quickly.
+
+2. **Game Playing (like Chess or Atari)**
+
+   * Agent: the player (AI).
+   * Environment: the game.
+   * Actions: moves made in the game.
+   * Reward: winning the game (or points scored).
+
+---
+
+## Intuitive Analogy
+
+It’s like **training a dog**:
+
+* When the dog does the right thing, you give a treat (reward).
+* When it does something wrong, no treat or a scolding (penalty).
+* Over time, it learns which behaviors maximize treats.
+
+---
+
+## Why This Matters in Interviews
+
+* Shows you know RL is **different from supervised/unsupervised**: no labeled data, but feedback from actions.
+* In **ML system design interviews**, you can connect RL to **real-world systems**:
+
+  * Online ad placement (maximizing click-through rate).
+  * Recommendation systems (optimizing long-term engagement).
+  * Robotics (learning to walk, grasp objects).
+
+---
+
+✅ **Crisp Interview Answer (Memorizable):**
+
+> “Reinforcement learning is when an agent learns by interacting with an environment and receiving rewards or penalties for its actions. The goal is to maximize long-term reward. For example, a self-driving car uses RL to learn how to accelerate, brake, or turn in order to reach its destination safely and efficiently.”
+
+---
+
+Do you want me to also prepare a **side-by-side comparison of supervised vs. unsupervised vs. reinforcement learning**? That’s a common follow-up interview question.
+
 # Classification - Supervised
 
 
