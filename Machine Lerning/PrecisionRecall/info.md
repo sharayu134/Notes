@@ -3,3 +3,5 @@
 Precision: Of all the listings our model flagged as fraudulent, what percentage were actually fraudulent? High precision means fewer false positives.
 
 Recall: Of all the truly fraudulent listings, what percentage did our model successfully flag? High recall means fewer false negatives.
+
+Accuracy is a poor choice due to the data imbalance. 
