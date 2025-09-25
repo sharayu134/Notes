@@ -15,3 +15,6 @@ Lets take gradient descent for linear regression
 * predict()
 * simply predict using the weight and bias from fit
 *  calculate loss (how far predicted value is from actual remember this is supervised we have labelled data)
+
+Anyways watch the video again
+
