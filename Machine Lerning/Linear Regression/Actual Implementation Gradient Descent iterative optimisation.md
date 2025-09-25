@@ -97,3 +97,35 @@ We sum up the values of $(y_{pred} - y)$ because we are calculating the **averag
 * Dividing by `n_samples` (`1/n_samples`) gives us the average error, which is the final gradient.
 
 This process ensures that the parameter updates are based on the collective performance of the model on the entire dataset, leading to a more stable and accurate convergence to the minimum of the cost function. This method is called **batch gradient descent**.
+
+
+Gradient descent is an iterative optimization algorithm used to find the minimum of a function. In machine learning, it's used to find the optimal values for a model's parameters (like weights and bias) by minimizing a **cost function** that measures the error between the model's predictions and the actual data.
+
+### How It Works 📈
+
+Imagine you're standing on a hill in a thick fog, and your goal is to get to the lowest point in the valley. You can't see the whole landscape, so you have to rely on local information. The most effective strategy is to feel the slope beneath your feet and take a step in the direction of the steepest descent. You repeat this process, taking small steps downhill until you reach the bottom.
+
+This is exactly what gradient descent does:
+1.  **Start somewhere**: The algorithm begins with an initial, random guess for the model's parameters. This is like starting at a random point on the hill.
+2.  **Find the slope**: It then calculates the **gradient** of the cost function at that point. The gradient is a vector of partial derivatives that points in the direction of the steepest *ascent* (uphill).
+3.  **Take a step**: The algorithm updates the parameters by moving in the **opposite direction** of the gradient. This ensures you're always moving downhill. The size of the step is determined by the **learning rate**, a hyperparameter you set.
+4.  **Repeat**: These steps are repeated over and over. With each iteration, the model's parameters are adjusted, and the cost function decreases. The steps get smaller as you get closer to the minimum, eventually converging to the lowest point of the function. 
+
+---
+
+### Key Components
+
+* **Cost Function (or Loss Function)**: This function quantifies the error of the model's predictions. The goal is to minimize this value. A common example is Mean Squared Error (MSE).
+* **Parameters (Weights and Bias)**: These are the values the model learns from the data to make predictions. Gradient descent adjusts these parameters to reduce the cost.
+* **Learning Rate ($\alpha$)**: This is a crucial hyperparameter that controls the size of the steps taken during each iteration.
+    * **Too large**: The algorithm might "overshoot" the minimum and fail to converge.
+    * **Too small**: The algorithm will take a very long time to converge.
+* **Gradient ($\nabla J$)**: This is the slope of the cost function with respect to the parameters. It tells the algorithm which way to go to decrease the cost most effectively.
+
+### Variants of Gradient Descent
+
+The primary difference between the types of gradient descent is the amount of data used to calculate the gradient in each step:
+
+* **Batch Gradient Descent**: Uses the **entire training dataset** to compute the gradient for each step. This provides a very stable and accurate gradient but can be computationally expensive and slow for large datasets.
+* **Stochastic Gradient Descent (SGD)**: Uses a **single, randomly selected training example** to compute the gradient at each step. This is much faster and can escape local minima more easily due to its noisy updates, but the path to convergence can be erratic.
+* **Mini-Batch Gradient Descent**: A compromise between the two, this is the most common variant. It uses a **small, randomly selected subset** of the training data (a "mini-batch") to compute the gradient. It offers a good balance of computational efficiency and stability.
