@@ -28,3 +28,18 @@ This shape fits better on this data
 There is simple(single feature) and multiple(multiple features) logistic regression()
 <img width="816" height="416" alt="image" src="https://github.com/user-attachments/assets/47edfc8e-2a2c-4f16-b2db-3bfa9d0d2abf" />
 
+# Some more notes
+* Classification problems like email spam or not, transaction is fradulnent or if someone has tumor or not
+* Outcome is {0,1}
+
+  ## Decision Boundary
+* Decision Boundary when we plot the Logistic regression data, line separating positives and negatives, it could curve hyperbola or anything else
+<img width="1235" height="677" alt="image" src="https://github.com/user-attachments/assets/e7ca63a4-5341-4ca9-923e-c3e966140e37" />
+
+## Loss / Cost Function for logistic regression
+* <img width="1235" height="677" alt="image" src="https://github.com/user-attachments/assets/4ab2a5c0-36eb-4d76-a1c6-72ff747f0c7b" />
+* <img width="1235" height="677" alt="image" src="https://github.com/user-attachments/assets/aa4af6a1-4639-451d-924f-d92e39a9818f" />
+* <img width="1597" height="842" alt="image" src="https://github.com/user-attachments/assets/b3a9d5e1-7870-409c-87ac-3fe13b869b6b" />
+* <img width="1661" height="842" alt="image" src="https://github.com/user-attachments/assets/5325c985-2183-4524-8963-82e4ebfb7c42" />
+
+
