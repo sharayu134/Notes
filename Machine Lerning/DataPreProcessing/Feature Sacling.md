@@ -1,0 +1,1 @@
+I noticed that one fallback is to skip semantic search when LS returns more than 960 results. But even then, LS might return many irrelevant results. Do you think it would make sense to check the relevance quality of LS results — say, using query–item semantic similarity for top-k — before deciding whether to trigger semantic search?
