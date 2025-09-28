@@ -42,4 +42,7 @@ There is simple(single feature) and multiple(multiple features) logistic regress
 * <img width="1597" height="842" alt="image" src="https://github.com/user-attachments/assets/b3a9d5e1-7870-409c-87ac-3fe13b869b6b" />
 * <img width="1661" height="842" alt="image" src="https://github.com/user-attachments/assets/5325c985-2183-4524-8963-82e4ebfb7c42" />
 
+Optimisation algorithms
+other than gradient descent properties
+<img width="1661" height="520" alt="image" src="https://github.com/user-attachments/assets/d865c140-f724-409a-a996-57321d7f53fb" />
 
