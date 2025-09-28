@@ -47,6 +47,4 @@ When interviewing for machine learning roles, especially ones involving evaluati
 
 ---
 
-If you like, I can give you **short summary notes** (for quick revision) or **flashcards** based on this video. Do you want me to make those?
-
-[1]: https://www.youtube.com/watch?v=4jRBRDbJemM&utm_source=chatgpt.com "ROC and AUC, Clearly Explained! - YouTube"
+link youtube.com/watch?v=4jRBRDbJemM
