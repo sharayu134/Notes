@@ -1,4 +1,4 @@
-* pruning prevents overfitting the data for Regrassion Trees 
+\* pruning prevents overfitting the data for Regrassion Trees 
 * Check variance and overfitting and otehr trees first
 * Cost complexity pruining - aka weekeast link pruning
 * Pruning is actually replacing the leaves to one common leaf like this one if full tree do not consider blurring here see whole tree  <img width="755" height="730" alt="image" src="https://github.com/user-attachments/assets/8debe1c9-81ba-4fe6-87c2-3d9d51b0e8cf" />
@@ -19,6 +19,7 @@
 * Alpha appretiates the lesser number of tree nodes in final score
 * The tree score is different for different alpha
 * SO it choosing value affects choosing the tree
+* Video link https://www.youtube.com/watch?v=D0efHEJsfHo
 
 
 
