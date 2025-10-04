@@ -10,13 +10,14 @@ Lets take gradient descent for linear regression
 * Do N iterations of following
 *   predict the values using set up weight and bias
 *   calculate dw (derivative of weight) and db (deriative of bias)
-*   reassign weight and bias using dw and db
-*
+*   re-assign weight and bias using dw and db
+
+
 * predict()
 * simply predict using the weight and bias from fit
 *  calculate loss (how far predicted value is from actual remember this is supervised we have labelled data)
 
-Anyways watch the video again
+Anyways watch the video again if you dont get it
 
 
 import numpy as np
