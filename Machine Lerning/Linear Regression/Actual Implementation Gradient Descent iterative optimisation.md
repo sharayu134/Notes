@@ -69,16 +69,7 @@ $$J(w, b) = \frac{1}{2m} \sum_{i=1}^{m} (y_{pred}^{(i)} - y^{(i)})^2$$
 
 To find the minimum of this function, we need to calculate its partial derivatives with respect to each parameter ($w$ and $b$). These derivatives are the gradients:
 
-* The gradient with respect to the weights ($w$) is:
-    $$
-    \frac{\partial J}{\partial w} = \frac{1}{m} \sum_{i=1}^{m} (y_{pred}^{(i)} - y^{(i)}) \cdot x^{(i)} = \frac{1}{m} X^T (y_{pred} - y)
-    $$
-    This is what `dw` represents in the code.
-* The gradient with respect to the bias ($b$) is:
-    $$
-    \frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^{m} (y_{pred}^{(i)} - y^{(i)}) = \frac{1}{m} \sum (y_{pred} - y)
-    $$
-    This is what `db` represents in the code.
+<img width="732" height="355" alt="image" src="https://github.com/user-attachments/assets/de08590d-6744-4b4b-90f7-ba4e153f3d4a" />
 
 These gradients tell us how much the cost function changes with a small change in our weights and bias. By subtracting a fraction of these gradients from the current weights and bias, we take a "step" downhill toward the minimum of the cost function. This is the **gradient descent update rule**:
 
