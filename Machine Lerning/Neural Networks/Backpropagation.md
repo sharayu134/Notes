@@ -10,7 +10,7 @@
 * So now we just assume that the b3 which we are looking for is zero
 * Now calculate the values for range(0,1) for this parameter set up
 * Find out how much is Loss - SSR [Sum of all Squared Residuals]
-* So now we will try to find out B3 for which SSR is minimum
+* So now we will try to find out B3 for which SSR is minimum by adusting the B3 for each iteration
 * Instead of finding out b3 from all the range value instead we can use gradient descent
 * So for that we will find out derivate of SSR <img width="1279" height="779" alt="image" src="https://github.com/user-attachments/assets/74e90651-6b12-49a3-812e-9014dda664e3" />
 
