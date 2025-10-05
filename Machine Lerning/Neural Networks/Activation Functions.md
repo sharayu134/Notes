@@ -15,7 +15,48 @@
   * <img width="559" height="213" alt="image" src="https://github.com/user-attachments/assets/914e5c07-f548-441e-97ff-343780e88078" />
   * so with softmax is mostly used at end when we are doing multiclass classification like recognising handwritten digits  In output we wanna know what number from 0 to 9 it is
 
+In machine learning, **tanh, ReLU, sigmoid, and softmax** are primarily used as **activation functions** within neural networks. They help the network learn complex patterns in data by introducing non-linearity. Each has specific properties that make it suitable for different real-life applications.
 
+---
+## Sigmoid
+The sigmoid function squashes any input value to a number between 0 and 1. This output can be interpreted as a probability, making it ideal for **binary classification** tasks where the goal is to predict one of two possible outcomes.
+
+* **Real-life Applications:**
+    * **Spam Detection 📧:** Classifying an email as either "spam" (1) or "not spam" (0).
+    * **Medical Diagnosis 🩺:** Predicting whether a patient has a certain disease (1) or not (0) based on their medical data.
+    * **Sentiment Analysis:** Determining if a product review is positive (1) or negative (0).
+
+
+
+---
+## Tanh (Hyperbolic Tangent)
+Tanh is very similar to the sigmoid function but squashes values to a range between -1 and 1. Because its output is zero-centered, it often helps in the training of a model by keeping the activations from shifting too far in one direction.
+
+* **Real-life Applications:**
+    * **Natural Language Processing (NLP) 🗣️:** It's commonly used in the hidden layers of Recurrent Neural Networks (RNNs) for tasks like sentiment analysis where the sentiment can be negative, neutral, or positive.
+    * **Sequence Data:** Analyzing time-series data or other sequential information where the context can be positive or negative.
+
+
+
+---
+## ReLU (Rectified Linear Unit)
+ReLU is one of the most popular activation functions in deep learning. It's very simple: if the input is positive, it outputs the same value; if it's negative, it outputs zero. This simplicity makes it computationally very efficient, allowing for faster training of large and deep neural networks.
+
+* **Real-life Applications:**
+    * **Computer Vision 🖼️:** Widely used in Convolutional Neural Networks (CNNs) for tasks like **image recognition** (e.g., identifying cats in photos) and **object detection** in self-driving cars.
+    * **Deep Learning Models:** It is the default activation function for the hidden layers of many types of neural networks due to its efficiency and ability to mitigate the vanishing gradient problem.
+
+
+
+---
+## Softmax
+The softmax function is a generalization of the sigmoid function. It's used in the output layer of a neural network for **multi-class classification** problems, where an input needs to be categorized into one of several possible classes. Softmax converts a vector of numbers into a probability distribution, where the sum of all the probabilities is 1.
+
+* **Real-life Applications:**
+    * **Handwritten Digit Recognition ✍️:** Classifying an image of a handwritten digit into one of the 10 possible classes (0 through 9). The output would be a probability for each digit, and the highest probability is the model's prediction.
+    * **Image Classification:** Identifying an animal in a picture as a "dog," "cat," "lion," or "horse."
+    * **Music Genre Classification 🎶:** Categorizing a song into genres like "rock," "pop," "jazz," or "classical."
+    * 
 The hyperbolic tangent, or **tanh**, is a mathematical function. It's an "S"-shaped (sigmoidal) curve that takes any real number and maps it to a value between -1 and 1.
 
 ---
