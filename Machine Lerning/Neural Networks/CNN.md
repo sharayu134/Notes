@@ -20,6 +20,7 @@ To understand what convolution is see this video https://www.youtube.com/watch?v
 * input image we are taking of 0 and 1 of 6*6, where computer tries to recognise the tictactoe O or X
 * First step  a convolutional neural network takes is to apply filter aka kernel to input image
 * <img width="1011" height="673" alt="image" src="https://github.com/user-attachments/assets/fed6ee82-2dbe-4958-a814-e6190e1083bc" />
+* The goal of convolution is to identify the features of an image, like edges, curves, corners 
 * Filter is smaller square of mostly 3*3 dimention
 * The intencity of each pixel is determined by backpropagation
 * so first we take the pixels randomly and then we backpropagate to find put the exact value
@@ -44,7 +45,9 @@ To understand what convolution is see this video https://www.youtube.com/watch?v
 * 
 
 
+## Practical stuff
 
+* In CNN you dont need to flatten the input, you can pass 2D or 3D data as well
 
 
 
