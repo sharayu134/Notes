@@ -1,5 +1,7 @@
 # Backpropagation 
 
+
+* you need chain rule for the same <img width="617" height="213" alt="image" src="https://github.com/user-attachments/assets/6c7f49f1-4518-42e9-bb81-2c82eeadb8bf" />
 * Here we are trying to find out the values for all the params - weights and biases
 *  These are the weigts and biases we are considering <img width="1022" height="480" alt="image" src="https://github.com/user-attachments/assets/7cf025e4-2620-4a98-a4df-e8f1de2444c8" />
 
