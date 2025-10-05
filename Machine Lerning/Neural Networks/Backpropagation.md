@@ -41,7 +41,15 @@
 * <img width="1265" height="711" alt="image" src="https://github.com/user-attachments/assets/779f6305-8856-498a-964e-dc49f5019af1" />
 * <img width="1265" height="711" alt="image" src="https://github.com/user-attachments/assets/af39320f-cf19-4936-921e-9872ade853ff" />
 * <img width="1265" height="711" alt="image" src="https://github.com/user-attachments/assets/8a0b1b00-5db6-4673-96ae-d5a1fd360c88" />
-* 
+* basically to calculate w3 and w4 do the same we did with b3 calculate slope via derivative (got by chain rule) the calculate the step size by calculating the slope*learning rate, then adjust step size keep doing till step size almost becomes zero
+* Inorder to calculate the first prameters or lets say all the params we will calculate the derivates for all SSR wrt w1 that comes like below
+* <img width="1263" height="581" alt="image" src="https://github.com/user-attachments/assets/ac262ac7-abd2-4869-9cce-6bc51c4713d3" />
+* outputs from w1 b1 becomes inoput for activation function and that output again can be combined , so by chaon rule the derivative becomes like this in terms of w3 that we already know
+* <img width="1263" height="677" alt="image" src="https://github.com/user-attachments/assets/ba717a44-8d15-41f3-bcbe-940c15647df7" />
+* so you calculate the same for w1, w2,,etc and then do the same stuff again as we did for b3, find slope fron derivate then multiply by learning rate to get step size, do untill step size becomes zero,
+* So to get the all the params at once we choose weights from normal distribution curve  keeping bias 0 as the always start from 0
+
+ 
 
 I was following https://www.youtube.com/watch?v=iyn2zdALii8
 
