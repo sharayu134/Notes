@@ -10,6 +10,7 @@
   * <img width="1445" height="683" alt="image" src="https://github.com/user-attachments/assets/70c874dc-5965-436d-b3b5-cd2663d063b5" />
 
 * Softmax
+  *log(1+e^x)  log in machine learnig is log to base e
   * It gives the probability of the output values from 0 to 1
   * <img width="559" height="213" alt="image" src="https://github.com/user-attachments/assets/914e5c07-f548-441e-97ff-343780e88078" />
   * so with softmax is mostly used at end when we are doing multiclass classification like recognising handwritten digits  In output we wanna know what number from 0 to 9 it is
