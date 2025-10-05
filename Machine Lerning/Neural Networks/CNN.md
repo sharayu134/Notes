@@ -16,7 +16,39 @@ To understand what convolution is see this video https://www.youtube.com/watch?v
   * Reduce number of pixels
   * Tolerate small shifts where the pixels are in image
   * Take advantage of the correlations that we observe in complex images
-  * 
+
+* input image we are taking of 0 and 1 of 6*6, where computer tries to recognise the tictactoe O or X
+* First step  a convolutional neural network takes is to apply filter aka kernel to input image
+* <img width="1011" height="673" alt="image" src="https://github.com/user-attachments/assets/fed6ee82-2dbe-4958-a814-e6190e1083bc" />
+* Filter is smaller square of mostly 3*3 dimention
+* The intencity of each pixel is determined by backpropagation
+* so first we take the pixels randomly and then we backpropagate to find put the exact value
+* we just multiply the first 6*6 part of image into filter we get one value (The multiplication is dot product)
+* <img width="1430" height="669" alt="image" src="https://github.com/user-attachments/assets/55388bfd-95c9-4747-afab-2e8414e0e33a" />
+* next we add a bias term to the value and then put it in feature map
+* <img width="1430" height="686" alt="image" src="https://github.com/user-attachments/assets/266e0c4d-5274-4a2b-9fbc-2f791101594a" />
+* Now we can move this filter over next pixel
+* <img width="1430" height="686" alt="image" src="https://github.com/user-attachments/assets/bdf58209-8003-4cec-a17b-2519d1d1f9d4" />
+* After we convolved over the image by filter gave us feature map <img width="735" height="740" alt="image" src="https://github.com/user-attachments/assets/79b9b1fb-7387-4beb-aae1-c3ec33688104" />
+* <img width="1393" height="740" alt="image" src="https://github.com/user-attachments/assets/3c4afece-670e-4fa3-b127-8e1f97579570" />
+* Now we pass this feature map through ReLU activstion function
+* Now it looks like this as ReLU is max(0,x) <img width="1393" height="740" alt="image" src="https://github.com/user-attachments/assets/3c881402-4755-44da-8d24-3a9c7b5938c9" />
+* Now again on the above output we overlap one more filter this can be max pool or mean pool but this time we are not moving over each pixel no overlap
+* <img width="1134" height="740" alt="image" src="https://github.com/user-attachments/assets/eb36e2c1-a61e-4e6a-a2bc-a2f0705f17a9" />
+* Max pooling did best job finding out where filter(kernel) pattern matched with actual image
+* <img width="1134" height="740" alt="image" src="https://github.com/user-attachments/assets/10ab1163-12cb-4889-b608-e29488ff89ee" />
+* Now this output will go into normal neural network with ReLU activation function
+* <img width="1424" height="740" alt="image" src="https://github.com/user-attachments/assets/2af379f9-a658-4744-832c-8514119edc4b" />
+* This neural network will give 0/1 based output for O or X 
+
+
+
+
+
+
+
+
+
 
 
 
