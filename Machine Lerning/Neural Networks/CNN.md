@@ -35,11 +35,14 @@ To understand what convolution is see this video https://www.youtube.com/watch?v
 * Now it looks like this as ReLU is max(0,x) <img width="1393" height="740" alt="image" src="https://github.com/user-attachments/assets/3c881402-4755-44da-8d24-3a9c7b5938c9" />
 * Now again on the above output we overlap one more filter this can be max pool or mean pool but this time we are not moving over each pixel no overlap
 * <img width="1134" height="740" alt="image" src="https://github.com/user-attachments/assets/eb36e2c1-a61e-4e6a-a2bc-a2f0705f17a9" />
-* Max pooling did best job finding out where filter(kernel) pattern matched with actual image
+* Max pooling did best job finding out where filter(kernel) pattern matched with actual image (CNN made use of correlations)
 * <img width="1134" height="740" alt="image" src="https://github.com/user-attachments/assets/10ab1163-12cb-4889-b608-e29488ff89ee" />
-* Now this output will go into normal neural network with ReLU activation function
+* Now this output will go into normal neural network with ReLU activation function, so here the inputs of 6*6=36 was converted into 4 inputs (CNN reduced the input numbers)
 * <img width="1424" height="740" alt="image" src="https://github.com/user-attachments/assets/2af379f9-a658-4744-832c-8514119edc4b" />
-* This neural network will give 0/1 based output for O or X 
+* This neural network will give 0/1 based output for O or X, we can also use softmax to interpret the result better way
+* CNN also works for small shifts in pixels <img width="1424" height="740" alt="image" src="https://github.com/user-attachments/assets/7b6f416c-3878-477b-a3dd-ffcb25f1ebe3" />
+* 
+
 
 
 
