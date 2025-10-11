@@ -42,14 +42,14 @@
 * <img width="961" height="545" alt="image" src="https://github.com/user-attachments/assets/d1b53036-1603-415f-9049-4f5d377e3486" />
 * So instead of taking small takes to find minima we take very small steps and never reach the minima
 * Solution to this is LSTM
-
+video https://www.youtube.com/watch?v=AsNTP8Kwu80
 # Long Short Term Memory Networks (LSTM)
-
 * LSTM uses different paths for long and short term memories
 * <img width="501" height="545" alt="image" src="https://github.com/user-attachments/assets/1a6d2b3a-b882-4b81-8d08-fe8ab36c336c" />
 * LSTM uses Sigmoid activation and Tanh activation function
-* 
+* There are two term memories 
 
+video https://www.youtube.com/watch?v=YCzL96nL7j0
 
 
 
