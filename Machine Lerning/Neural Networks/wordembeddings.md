@@ -58,7 +58,9 @@
 * training can be slow, so negative sampling is used to reduce this
 * the number which are not considered for predictions will be considered as 0 in input
 <img width="1024" height="542" alt="image" src="https://github.com/user-attachments/assets/e0860888-d958-4d01-8dd4-a85b2fe48785" />
-* 
+* also we can select some words that we dont want to submit
+* <img width="1024" height="542" alt="image" src="https://github.com/user-attachments/assets/c6b448c4-aaa8-448e-8817-3f517bca7423" />
+
 
 
  
