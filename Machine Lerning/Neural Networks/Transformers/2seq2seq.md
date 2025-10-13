@@ -1,6 +1,6 @@
 #  Sequence to Sequence problem can be solved with Encoder-Decoder problem
 
-* lets understand seq2seq problems (trnslation)
+* lets understand seq2seq problems (translation)
   * convert let's go in spanish
   * sequence of amino acids to be translated to 3D structures like alpha helics
  
