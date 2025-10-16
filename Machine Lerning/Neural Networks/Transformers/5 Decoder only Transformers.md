@@ -13,5 +13,5 @@
 * However decoder-only transformer uses self attention uses 
 * <img width="1058" height="592" alt="image" src="https://github.com/user-attachments/assets/88428a70-b102-4e19-98f1-cd0de4893585" />
 * 
-* These models form basis for **ChatGPT**
-*  
+* These models form basis for **ChatGPT** **Gemini**
+*  They can 
