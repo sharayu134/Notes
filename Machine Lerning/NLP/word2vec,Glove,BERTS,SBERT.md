@@ -1,7 +1,4 @@
-Of course. Here's a breakdown of Word2Vec, GloVe, BERT, and Sentence Transformers, focusing on what they are, their trade-offs, and how to discuss them in an ML system design interview.
-
-These techniques represent an evolution in converting text into meaningful numerical vectors (embeddings), moving from context-agnostic representations to deeply contextual ones.
-
+reAD this first https://github.com/sharayu134/Notes/blob/main/Machine%20Lerning/Neural%20Networks/wordembeddings.md
 ---
 
 ## 1. Word2Vec and GloVe (Static Word Embeddings)
@@ -46,6 +43,8 @@ The key output is a dense vector for each word (e.g., "king" -> `[0.2, -0.4, 0.7
 ---
 
 ## 2. BERT Embeddings (Contextual Word Embeddings)
+
+read this first https://github.com/sharayu134/Notes/blob/main/Machine%20Lerning/Neural%20Networks/Transformers/6%20Encoder%20only%20transformer.md
 
 **What It Is:** BERT (Bidirectional Encoder Representations from Transformers) fundamentally changed the NLP landscape. It's a large, pre-trained language model based on the **Transformer architecture**.
 
