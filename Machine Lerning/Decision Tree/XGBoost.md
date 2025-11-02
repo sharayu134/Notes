@@ -1,4 +1,8 @@
 * It can run on CPU simple also
+
+
+
+
 In the realm of machine learning, particularly in regression modeling, **L1 (Lasso)** and **L2 (Ridge)** regularization are two fundamental techniques used to prevent overfitting and improve the generalization performance of models. Overfitting occurs when a model learns the training data too well, including its noise and idiosyncrasies, leading to poor performance on new, unseen data. Regularization methods address this by adding a penalty term to the model's loss function, which discourages overly complex models.
 
 ### The Core Idea: Penalizing Complexity
