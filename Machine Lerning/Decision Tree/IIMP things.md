@@ -6,3 +6,6 @@ scale
 sla 
 personalisation requored ? or not
 clear requirements
+* CHUNKING IN RAG
+* NORMALISE
+* 
