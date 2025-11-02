@@ -1,1 +1,2 @@
-https://developers.google.com/machine-learning/recommendation/collaborative/matrix
+https://developers.google.com/machine-learning/recommendation/overview
+
