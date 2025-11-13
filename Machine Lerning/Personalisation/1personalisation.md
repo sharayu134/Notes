@@ -1,7 +1,4 @@
-.
-Sure — let’s go step by step! These are the **two main approaches** to personalization in machine learning systems — especially in **recommendation systems**.
 
----
 
 ## 🎯 1. Collaborative Filtering (CF)
 
