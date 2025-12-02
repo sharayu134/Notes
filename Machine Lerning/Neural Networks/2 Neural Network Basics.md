@@ -43,7 +43,7 @@
 * <img width="1920" height="1059" alt="image" src="https://github.com/user-attachments/assets/3301056c-1b29-4957-8fd9-a998ddd4b618" />
 
 * The parameters that we multiply by are called as **weights** and the parameters that we add is called **bias**
-* Got to this file and see how it's being implemented using pytorch https://github.com/sharayu134/Notes/blob/main/Machine%20Lerning/Neural%20Networks/Neural_Network_to_recognise_handwritten_digits.ipynb
+* Got to this file and see how it's being implemented using pytorch https://github.com/sharayu134/Notes/blob/main/Machine%20Lerning/Neural%20Networks/4%20Neural_Network_to_recognise_handwritten_digits.ipynb
 * And cpme back
 * This is multilayer perceptron which is actually not so good as if you give some random image as input it will predict anyone from 0 to 9 somehow because it's not intelligent it cannot draw 5 or any other digit for you 
 
