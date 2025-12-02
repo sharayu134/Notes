@@ -1,3 +1,50 @@
+Here is the formula for Negative Log Likelihood (NLL), broken down into the general math definition and how PyTorch calculates it.
+
+### 1. The General Math Formula
+Mathematically, for a single data point, the NLL loss is:
+
+$$Loss = -\log(p_{correct})$$
+
+Where:
+* **$p_{correct}$**: The probability your model predicted for the **true class** (the correct answer).
+* **$\log$**: The natural logarithm (base $e$).
+* **$-$ (Negative sign)**: Flips the result to be a positive number.
+
+#### Why does this formula work?
+Probabilities are between 0 and 1. The logarithm of any number between 0 and 1 is **negative**.
+* $\log(0.9) \approx -0.1$ (Confident & Correct)
+* $\log(0.1) \approx -2.3$ (Unsure & Correct)
+
+Since "Loss" should be a positive penalty, we add the negative sign to flip it:
+* $-(-0.1) = \mathbf{0.1}$ (Low penalty)
+* $-(-2.3) = \mathbf{2.3}$ (High penalty)
+
+---
+
+### 2. The PyTorch Specific Formula (`F.nll_loss`)
+In PyTorch, `F.nll_loss` assumes you have **already calculated the Logarithm** (usually via a `LogSoftmax` layer) before passing the data in.
+
+So, the PyTorch calculation is actually simpler:
+
+$$Loss = -1 \times \text{input}[\text{target\_index}]$$
+
+Because the input is already a log-probability (a negative number), PyTorch simply looks up the value for the correct answer and removes the negative sign.
+
+#### Example Walkthrough
+1.  **Truth:** The image is a "Cat" (Index 1).
+2.  **Model Output (after LogSoftmax):** `[-5.2, -0.3, -8.1]`
+    * (Index 0 is Dog, Index 1 is Cat, Index 2 is Bird)
+3.  **Calculation:**
+    * Find value at Index 1 (Cat): **-0.3**
+    * Apply formula: $-1 \times (-0.3)$
+    * **Loss = 0.3**
+
+### Summary
+* **Math Definition:** Calculate the log of the probability of the correct answer, then make it positive.
+* **PyTorch Implementation:** Look up the pre-calculated log-probability of the correct answer, then make it positive.
+
+* 
+**Used for multiclass classification**
 This line of code calculates the **Negative Log Likelihood Loss** between your model's prediction (`output`) and the true label (`y`).
 
 Here is a breakdown of what the code does, followed by a correction of the comment in your snippet regarding "MSE vs. NLL."
