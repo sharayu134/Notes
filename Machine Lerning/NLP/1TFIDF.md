@@ -2,6 +2,13 @@ It appears you may have a typo and are likely asking about **TF-IDF encoding**. 
 
 In essence, TF-IDF provides a way to score the significance of words, giving higher scores to terms that are frequent in a specific document but rare across all other documents. This helps in filtering out common words (like "the," "a," "is") that appear in many documents but don't carry much specific meaning for a particular document.
 
+### drawbacks of TFIDF
+* order not considered
+* semantics or context is not considered
+* vector is sparse
+* normalisation is requried to recompute/newly get the vector each time
+
+* 
 ### The Two Components of TF-IDF
 
 The TF-IDF score is the product of two metrics: Term Frequency (TF) and Inverse Document Frequency (IDF).
