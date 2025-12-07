@@ -167,7 +167,60 @@ The result is a model that takes a full sentence and outputs a single, fixed-siz
 **Trade-offs & Limitations:**
 * **Computational Cost:** While much faster for inference than using a raw BERT for similarity tasks, it still carries the computational overhead of the Transformer architecture.
 * **Domain Specificity:** The performance is best when the model is fine-tuned on a dataset relevant to your specific domain (e.g., scientific papers, financial reports).
+While BERT (Bidirectional Encoder Representations from Transformers) revolutionized Natural Language Processing (NLP) by allowing computers to understand context from both left and right directions, it is not without significant flaws.
 
+Its drawbacks generally fall into three categories: **Architectural Limits**, **Training Inefficiencies**, and **Operational Costs**.
+
+### 1. Architectural Limitations
+The design choices that make BERT good at understanding also limit its flexibility.
+
+* **Fixed Input Length (512 Tokens):**
+    BERT has a hard limit of 512 tokens (roughly 300–400 words) per input.
+    * *The Problem:* It cannot natively process long documents (like legal contracts or books) in one go. You must chop the text into chunks, which often breaks the context between chunks.
+    * *The Cause:* The "Self-Attention" mechanism scales quadratically ($O(n^2)$). If you double the input length, the computational cost quadruples.
+
+* **Poor at Text Generation (NLG):**
+    BERT is an **Encoder-only** model. It is designed to "read and understand," not "write."
+    * *The Problem:* It struggles with tasks like translation, summarization, or creative writing. It cannot generate fluent text sequence-by-sequence (autoregressively) like GPT (which is a **Decoder** model).
+
+* **Static Masking:**
+    In the original BERT, the words masked (hidden) for the model to guess were selected once during data preprocessing and never changed. If you trained for 10 epochs, the model saw the exact same masks 10 times, limiting its ability to learn robust patterns. (Later models like RoBERTa fixed this with "Dynamic Masking").
+
+### 2. Training Inefficiencies
+BERT is surprisingly inefficient at learning compared to modern standards.
+
+* **Sample Inefficiency (The 15% Rule):**
+    BERT learns by guessing masked words, but only **15%** of the words in a sentence are masked at a time.
+    * *The Consequence:* The model learns nothing from the other 85% of the words in that specific pass. It requires massive amounts of data and training steps to converge because it learns so slowly per example.
+
+* **The Mismatch Discrepancy:**
+    During training, BERT sees the special `[MASK]` token (e.g., "The [MASK] sat on the mat").
+    * *The Problem:* During real-world use (inference), the `[MASK]` token **never appears**. This creates a mismatch between how the model was trained and how it is used, theoretically hurting performance.
+
+* **NSP (Next Sentence Prediction) Flaw:**
+    BERT was trained on a secondary task to guess if Sentence B followed Sentence A. Research later showed this task was too easy and not actually helpful. Removing it (as seen in RoBERTa) actually *improved* performance.
+
+### 3. Operational Costs
+BERT is heavy and slow, making it difficult to use in production environments.
+
+* **High Latency (Slow Inference):**
+    Because BERT is a deep neural network (usually 12 or 24 layers), every single prediction requires millions of matrix multiplications.
+    * *The Result:* It is often too slow for real-time applications (like search autocomplete) without heavy optimization or specialized hardware (GPUs/TPUs).
+
+* **Large Memory Footprint:**
+    A standard `BERT-Base` model is roughly 440MB. Loading this into memory for a mobile app or a small edge device (like an IoT sensor) is often impossible.
+
+### Summary: BERT vs. The Alternatives
+
+| Feature | BERT | GPT (Generative) | DistilBERT (Lightweight) |
+| :--- | :--- | :--- | :--- |
+| **Primary Strength** | Understanding (Classification, NER) | Writing (Generation, Chat) | Speed & Efficiency |
+| **Architecture** | Encoder Only | Decoder Only | Encoder (Compressed) |
+| **Speed** | Slow | Fast (for generation) | Fast (~40% faster than BERT) |
+| **Max Context** | 512 Tokens | 4,096+ Tokens | 512 Tokens |
+
+### Next Step
+To solve the speed/size issue, engineers often use **Distillation** (making a smaller student model learn from a larger teacher model). Would you like me to explain how **DistilBERT** works and how it retains 97% of BERT's performance while being 40% smaller?
 ### **Summary Table for Interviews**
 
 | Feature | **Word2Vec / GloVe** | **BERT Embeddings** | **Sentence Transformers** |
