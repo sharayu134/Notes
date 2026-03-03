@@ -87,3 +87,30 @@ Tanh is widely used in various fields for its convenient properties:
 * **Machine Learning & Neural Networks** 🧠: It is often used as an **activation function** in neural networks. Because its output is centered around zero (from -1 to 1), it can help in model training by normalizing values passed between layers.
 * **Physics & Engineering** ⚛️: It appears in calculations related to special relativity (rapidity) and in modeling magnetic systems (e.g., the Ising model).
 * **Calculus**: Its derivative is simple and expressed in terms of itself: $\frac{d}{dx}\tanh(x) = 1 - \tanh^2(x)$.
+
+
+The **GELU (Gaussian Error Linear Unit)** is an activation function frequently used in modern deep learning models, particularly in Transformer architectures like BERT, GPT, and RoBERTa.
+
+Unlike traditional activation functions that are deterministic, GELU weighs the input by its magnitude. It essentially combines the properties of the Dropout technique and the ReLU (Rectified Linear Unit) function by multiplying the input by a stochastic choice (based on the Gaussian cumulative distribution function).
+
+### The Mathematical Formulation
+
+The function is defined as:
+
+$$GELU(x) = x \cdot \Phi(x)$$
+
+Where $\Phi(x)$ is the cumulative distribution function of the standard Gaussian distribution:
+
+$$\Phi(x) = \frac{1}{2} \left[ 1 + \text{erf}\left( \frac{x}{\sqrt{2}} \right) \right]$$
+
+In practice, this is often computed using a fast approximation:
+
+$$GELU(x) \approx 0.5x \left( 1 + \tanh \left[ \sqrt{\frac{2}{\pi}} \left( x + 0.044715x^3 \right) \right] \right)$$
+
+### Why it is used
+
+* **Non-zero Gradients:** Unlike ReLU, which has a gradient of zero for all negative inputs (leading to the "dying ReLU" problem), GELU provides a smooth, non-zero gradient for negative values.
+* **Smoothness:** GELU is continuously differentiable everywhere. This smoothness helps the loss landscape remain better behaved, which often leads to faster and more stable convergence during training.
+* **Performance:** By incorporating the Gaussian distribution, the function essentially allows for "gating" mechanisms that naturally learn whether to keep or drop an input based on its value, which has proven highly effective in large-scale language models.
+
+Would you like me to explain how the gradient of the GELU function compares to other common activation functions like Swish or SiLU?
