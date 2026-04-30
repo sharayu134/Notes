@@ -317,13 +317,275 @@ LIMIT 5;
 ```
 
 ---
+## IVFFlat vs HNSW: When to Use Which
 
-### Summary: why HNSW fits your design
+### Quick decision framework
 
-| Concern from your design | HNSW behavior |
-|---|---|
-| Hourly batch syncs with 5%+ churn | Incremental inserts keep graph fresh — no `REINDEX` job needed |
-| Heavy structural pre-filters (`type`, `category`) | Graph traversal adapts around filtered-out nodes |
-| Hard cosine thresholds (0.80, 0.92) driving create/update | Near-exact recall at 26k means thresholds behave deterministically |
-| Low QPS (~500/day) + Redis cache | Sub-millisecond query latency, cache mostly absorbs repeat queries |
-| Future growth path | HNSW scales to millions; upgrade to AlloyDB/ScaNN only if you hit tens-of-millions |
+| | **Choose IVFFlat** | **Choose HNSW** |
+|---|---|---|
+| **Corpus size** | Millions+ where build time matters | Any size, especially < 1M |
+| **Write pattern** | Bulk load, rarely updated | Continuous inserts/updates |
+| **Query filters** | Unfiltered or lightly filtered | Heavy pre-filters |
+| **Latency budget** | Relaxed (tens of ms okay) | Strict (sub-ms needed) |
+| **Memory budget** | Tight — every MB counts | Comfortable |
+| **Recall requirement** | "Good enough" (90–95%) | Near-exact (>99%) |
+| **Ops appetite** | Willing to run periodic REINDEX | Prefer zero maintenance |
+
+---
+
+### The fundamental architectural difference
+
+**IVFFlat** is a **partitioning** strategy — divide the space into buckets, only search a few.
+
+**HNSW** is a **graph traversal** strategy — connect neighbors, walk the graph toward the answer.
+
+This single difference cascades into every trade-off below.
+
+---
+
+## Trade-off 1: Build time vs. query quality
+
+### IVFFlat wins when you bulk-load and rarely rebuild
+
+IVFFlat runs k-means once at build time. For large datasets, this is dramatically faster than HNSW's sequential graph construction.
+
+**Example — e-commerce product catalog (10M products, nightly full refresh):**
+
+```
+Scenario: You rebuild your search index nightly from a data warehouse export.
+          10M product embeddings × 768 dimensions.
+
+IVFFlat (lists=3162):
+  Build time: ~2–4 minutes
+  Nightly rebuild fits easily in a maintenance window.
+
+HNSW (m=16, ef_construction=100):
+  Build time: ~30–60 minutes
+  Nightly rebuild is painful. Eats into your maintenance window.
+  You'd need to build on a replica and swap.
+```
+
+**Verdict:** If your workflow is "dump all vectors → build index → serve reads until next dump," IVFFlat's fast build is a major advantage.
+
+### HNSW wins when data trickles in continuously
+
+HNSW absorbs new vectors incrementally — each insert is a few graph edge updates. IVFFlat appends new vectors to the nearest cluster, but the centroids go stale.
+
+**Example — your rule mirror (26k rules, hourly sync of ~50–200 changed rows):**
+
+```
+IVFFlat:
+  Hourly sync inserts/updates ~100 rows.
+  New vectors assigned to nearest frozen centroid — may not be ideal.
+  After a few days, cluster boundaries drift.
+  Need nightly REINDEX to restore recall.
+
+HNSW:
+  Hourly sync inserts/updates ~100 rows.
+  Each row is wired into the graph with proper neighbor connections.
+  Graph stays fresh indefinitely. No REINDEX ever.
+```
+
+**Verdict:** Continuous writes favor HNSW. You trade a longer initial build (seconds at 26k) for zero ongoing maintenance.
+
+---
+
+## Trade-off 2: Memory
+
+### IVFFlat wins when memory is tight
+
+IVFFlat stores: raw vectors + 100 centroid vectors + a mapping from centroid → vector list. Overhead is negligible.
+
+HNSW stores: raw vectors + a multi-layer adjacency graph (each node stores `M` neighbor IDs per layer).
+
+**Example — IoT anomaly detection (50M sensor embeddings × 128-d, running on a 16 GB machine):**
+
+```
+Raw vectors: 50M × 128 × 4 bytes = 25.6 GB  ← doesn't fit either way
+
+But at a more feasible 5M × 128-d:
+  Raw vectors: 2.56 GB
+
+  IVFFlat overhead: ~10 MB (centroids + list pointers)
+  Total: ~2.57 GB ✓
+
+  HNSW overhead: ~640 MB (5M × 16 edges × 8 bytes, plus upper layers)
+  Total: ~3.2 GB
+
+  Difference: 630 MB — that's real on a constrained machine.
+```
+
+**Verdict:** At multi-million scale on memory-constrained infra, IVFFlat's minimal overhead matters. At your scale (26k), the difference is 0 MB vs 4 MB — irrelevant.
+
+---
+
+## Trade-off 3: Filtered queries
+
+### HNSW wins when queries have WHERE clauses
+
+This is the most under-discussed trade-off and the one most relevant to your system.
+
+**Example — multi-tenant SaaS (500k documents, each tagged with a `tenant_id`, queries always filter by tenant):**
+
+```sql
+SELECT * FROM documents
+WHERE tenant_id = 'acme-corp'    -- 2,000 of 500k docs belong to this tenant
+ORDER BY embedding <=> $query
+LIMIT 10;
+```
+
+**IVFFlat behavior:**
+
+```
+lists=700, probes=20
+
+Step 1: Find 20 closest centroids to query.
+Step 2: Scan all vectors in those 20 clusters (~14,000 vectors).
+Step 3: Apply filter: tenant_id = 'acme-corp'.
+
+Problem: Acme's 2,000 docs are spread across all 700 clusters.
+         In your 20 probed clusters, maybe only ~57 Acme docs exist.
+         After filtering, you're picking top-10 from ~57 candidates.
+         The actual nearest Acme doc might be in a cluster you didn't probe.
+
+Recall: unpredictable — could be 70%, could be 95%.
+```
+
+**HNSW behavior:**
+
+```
+Step 1: Start at graph entry point, descend to layer 0.
+Step 2: Beam search (ef_search=40).
+        Visit node → check filter → if tenant_id ≠ 'acme-corp',
+        DON'T add to results, but DO expand its neighbors.
+        Keep walking until 40 qualifying nodes found.
+
+The non-matching nodes act as bridges to reach matching ones.
+Recall: consistently >99%.
+```
+
+**Your system's version of this problem:**
+
+```sql
+WHERE is_current = TRUE          -- cuts ~26k to ~15k
+  AND type = 0                   -- cuts to ~15.6k (most are type 0, but other types lose heavily)
+  AND item_category_ids ?| $cats -- cuts further, possibly to hundreds
+```
+
+When the surviving set is a small fraction of the total, IVFFlat's fixed-cluster probing gets unreliable. HNSW's adaptive traversal stays robust.
+
+---
+
+## Trade-off 4: Recall consistency
+
+### HNSW wins on recall predictability
+
+**Example — legal document similarity (100k documents, litigation depends on finding the right precedent):**
+
+```
+You need to find the 5 most similar prior cases to a new filing.
+Missing a relevant precedent could mean losing a case.
+
+IVFFlat (lists=316, probes=30):
+  Recall averages 95%, but varies from 85–99% per query.
+  Some queries land unluckily between cluster boundaries.
+  You don't know which queries got bad recall.
+
+HNSW (m=16, ef_search=100):
+  Recall averages 99.5%, varies from 98–100%.
+  The graph structure means even adversarial query positions
+  get reached within a few extra hops.
+```
+
+**Verdict:** When recall variance matters more than average recall, HNSW is safer. For your Approval agent's cosine thresholds (0.80 / 0.92), a single missed neighbor can flip a `create` to an `update`. You need consistent recall, not good-on-average recall.
+
+---
+
+## Trade-off 5: Tuning complexity
+
+### IVFFlat wins on simplicity (sort of)
+
+IVFFlat has two knobs: `lists` (build-time) and `probes` (query-time). Rules of thumb exist:
+
+```
+lists  = sqrt(N)         → for N < 1M
+lists  = N / 1000        → for N > 1M
+probes = sqrt(lists)     → balanced default
+```
+
+HNSW has three knobs, and their interactions are subtler:
+
+```
+m                = 16    → almost always fine (12–32 range)
+ef_construction  = 64    → higher = better graph, slower build
+ef_search        = 40    → higher = better recall, slower query
+```
+
+**But here's the catch:** IVFFlat's "simplicity" is deceptive. The interaction between `lists`, `probes`, and **your filter selectivity** is hard to reason about. You tune probes for unfiltered recall, deploy, then a filtered query silently gets 80% recall. With HNSW, `ef_search` behaves predictably regardless of filters.
+
+---
+
+## Trade-off 6: Deletion handling
+
+### HNSW has a real weakness here
+
+**Example — content moderation platform (1M posts, 10k deleted daily, embeddings must be removed):**
+
+```
+IVFFlat:
+  Delete a vector → remove from its cluster's list. Clean.
+  Cluster centroids are slightly stale, but REINDEX fixes it.
+
+HNSW:
+  Delete a vector → mark as deleted, but the graph edges remain.
+  Other nodes still point to the deleted node as a neighbor.
+  Over time, the graph accumulates "tombstones" that waste traversal steps.
+  pgvector handles this with VACUUM, but heavy delete churn (>10%/day)
+  can degrade query performance between vacuums.
+```
+
+**Your system:** Rules are soft-deleted upstream and synced as `is_current = FALSE`. You're not physically deleting rows from `rules_mirror` — they just stop matching the `WHERE is_current = TRUE` filter. So this trade-off doesn't apply to you.
+
+---
+
+## Trade-off 7: Scaling ceiling
+
+### Both have different ceilings
+
+**IVFFlat** scales to hundreds of millions with proper tuning, but recall degrades gradually and you need more aggressive probing (slower queries) to compensate.
+
+**HNSW** scales to tens of millions comfortably in pgvector. Beyond that, memory becomes the bottleneck (the graph itself gets large). Dedicated vector DBs (Pinecone, Weaviate) or AlloyDB with ScaNN handle the 100M+ range.
+
+**Example — Spotify-scale music recommendation (100M track embeddings):**
+
+```
+IVFFlat (lists=100,000, probes=500):
+  Build: ~30 minutes. Workable.
+  Query: scanning ~1,000 vectors per query. ~10ms. Fine.
+  Memory overhead: minimal.
+  Trade-off: recall plateaus at ~93% without aggressive probing.
+
+HNSW (m=32, ef_construction=200):
+  Build: ~6 hours. Painful.
+  Query: ~50 hops × 32 neighbors checked. ~2ms. Faster.
+  Memory overhead: ~50 GB for the graph alone.
+  Trade-off: needs beefy machines.
+
+At this scale, neither pgvector option is ideal.
+You'd use ScaNN, Faiss, or a managed vector DB.
+```
+
+---
+
+## Summary cheat sheet
+
+| Scenario | Winner | Why |
+|---|---|---|
+| Nightly bulk reload, 10M+ vectors | **IVFFlat** | Fast rebuild, low memory |
+| Continuous inserts, < 1M vectors | **HNSW** | No reindex, graph stays fresh |
+| Queries with WHERE clauses | **HNSW** | Adaptive traversal through non-matching nodes |
+| Strict recall requirements | **HNSW** | Consistent >99% vs IVFFlat's variable 85–99% |
+| Memory-constrained environment | **IVFFlat** | Negligible overhead vs HNSW's graph storage |
+| Heavy delete churn (>10%/day) | **IVFFlat** | Cleaner deletion semantics |
+| Ultra-large scale (100M+) | **Neither in pgvector** | Use ScaNN / Faiss / managed vector DB |
+
